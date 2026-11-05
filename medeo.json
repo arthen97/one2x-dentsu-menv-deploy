@@ -1,0 +1,7 @@
+{
+  "build": {
+    "shape": "static",
+    "root": ".",
+    "output": "dist"
+  }
+}

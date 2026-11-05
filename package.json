@@ -1,0 +1,12 @@
+{
+  "name": "one2x-dentsu-menv-deploy",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Tiny static deploy bootstrap for the complete pinned One2X Dentsu report",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "build": "node scripts/build.mjs"
+  }
+}

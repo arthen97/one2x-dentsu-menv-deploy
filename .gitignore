@@ -1,0 +1,5 @@
+dist/
+node_modules/
+.one2x-work*/
+.DS_Store
+*.log
