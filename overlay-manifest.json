@@ -1,0 +1,86 @@
+{
+  "schemaVersion": 1,
+  "update": "KAIROS current script / AE native v6",
+  "assets": [
+    {
+      "path": "index.html",
+      "size": 37811,
+      "sha256": "f897088e4574ba299785b77cb6cdfa1f0163df9cb8f4440587dbb50f0b999aac",
+      "mime": "text/html",
+      "type": "html",
+      "storage": "file"
+    },
+    {
+      "path": "materials/Claude交接-2026-11-04/视觉提案-v2/KAIROS-Claude完善版-完整文字稿.txt",
+      "size": 6083,
+      "sha256": "5babcb04eea74eb4077d3253b650be03bbd09ebad90aec909044dab8a5d411c3",
+      "mime": "text/plain",
+      "type": "document",
+      "storage": "file"
+    },
+    {
+      "path": "materials/Claude交接-2026-11-04/视觉提案-v2/KAIROS-Claude完善版.html",
+      "size": 50277,
+      "sha256": "9cafd7b887981018a4cc84374159386aece181778ecb2be4259c962ce6bcd5bf",
+      "mime": "text/html",
+      "type": "html",
+      "storage": "file"
+    },
+    {
+      "path": "materials/Claude交接-2026-11-04/视觉提案-v2/KAIROS-当前脚本-制作对照.md",
+      "size": 18691,
+      "sha256": "db27b3d1f01bb71897b5b9998a5c62bd49ff56c49205dd76dd4b5dc6500c4ed0",
+      "mime": "text/markdown",
+      "type": "document",
+      "storage": "file"
+    },
+    {
+      "path": "materials/Claude交接-2026-11-04/视觉提案-v2/KAIROS-当前脚本.html",
+      "size": 19330,
+      "sha256": "54e9f08b7de8de3659e0d0c281aa5c24eecbd148ea516aae80aafa55b5f7c496",
+      "mime": "text/html",
+      "type": "html",
+      "storage": "file"
+    },
+    {
+      "path": "materials/Claude交接-2026-11-04/视觉提案-v2/KAIROS-当前脚本.json",
+      "size": 29167,
+      "sha256": "ac1b498396844b31d332cd40663369679d8c93ab4f426aed297a413d8f6f9dc7",
+      "mime": "application/json",
+      "type": "document",
+      "storage": "file"
+    },
+    {
+      "path": "materials/Claude交接-2026-11-04/视觉提案-v2/KAIROS-当前脚本.md",
+      "size": 6072,
+      "sha256": "f84b38a73774848099aa81c77389f01423e398cd7c9ce0ad67aeebe3dde6da61",
+      "mime": "text/markdown",
+      "type": "document",
+      "storage": "file"
+    },
+    {
+      "path": "materials/Claude交接-2026-11-04/视觉提案-v2/KAIROS-当前脚本.txt",
+      "size": 6083,
+      "sha256": "5babcb04eea74eb4077d3253b650be03bbd09ebad90aec909044dab8a5d411c3",
+      "mime": "text/plain",
+      "type": "document",
+      "storage": "file"
+    },
+    {
+      "path": "materials/Claude交接-2026-11-04/视觉提案-v2/current-script/assets/KAIROS-v6-poster.jpg",
+      "size": 158079,
+      "sha256": "84d3541dfc9f5102c34dc88cb553e0b747449773f8955ea1cda0ec734a824834",
+      "mime": "image/jpeg",
+      "type": "image",
+      "storage": "file"
+    },
+    {
+      "path": "materials/Claude交接-2026-11-04/视觉提案-v2/references-28.html",
+      "size": 49739,
+      "sha256": "71d3fdb616b8653b85eae69310b73eca9dbe58f4cf026f945cc3175253c7de76",
+      "mime": "text/html",
+      "type": "html",
+      "storage": "file"
+    }
+  ]
+}

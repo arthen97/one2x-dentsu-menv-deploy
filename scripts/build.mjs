@@ -6,6 +6,7 @@ import {fileURLToPath} from 'node:url';
 import {spawn} from 'node:child_process';
 import {Readable} from 'node:stream';
 import {pipeline} from 'node:stream/promises';
+import {applyOverlay} from './overlay.mjs';
 
 const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');
 const commit='130eda427a9edceef22e7e5377ce2f9d924edc7b';
@@ -82,9 +83,12 @@ try{
   console.log('[deploy] Pinned manifest confirmed. Rebuilding all 323 logical files.');
   await run('build.mjs');
   await run('verify-assets.mjs');
+  const release=await applyOverlay({root,dist:path.join(source,'dist'),manifest,baseContentCommit:commit,baseContentTree:tree});
+  const finalCounts=release.assets.reduce((out,a)=>(out[a.type]=(out[a.type]||0)+1,out),{});
+  for(const type of ['video','image','font'])if((finalCounts[type]||0)<counts[type])throw Error('Overlay would reduce the original '+type+' asset count');
   await rm(dist,{recursive:true,force:true});
   await rename(path.join(source,'dist'),dist);
-  console.log(JSON.stringify({deployBuild:'passed',commit,tree,logicalFiles:323,counts,allLogicalSHA256Verified:true,output:'dist',localArchiveValidation:Boolean(localArchive)},null,2));
+  console.log(JSON.stringify({deployBuild:'passed',commit,tree,logicalFiles:release.assets.length,counts:finalCounts,overlayCount:release.overlayCount,allLogicalSHA256Verified:true,releaseManifest:'dist/release-manifest.json',output:'dist',localArchiveValidation:Boolean(localArchive)},null,2));
 }finally{
   await rm(work,{recursive:true,force:true});
 }

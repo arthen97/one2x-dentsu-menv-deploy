@@ -1,0 +1,532 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>KAIROS 60秒｜真实功能主线 · 动态预演</title>
+<style>
+@font-face{font-family:Manrope;font-weight:700;src:url("../../KAIROS-60s-分镜表/官网实拍/assets/Manrope-normal-700-latin.woff2") format("woff2")}
+@font-face{font-family:Manrope;font-weight:500;src:url("../../KAIROS-60s-分镜表/官网实拍/assets/Manrope-normal-500-latin.woff2") format("woff2")}
+*{box-sizing:border-box}
+html{scroll-padding-top:76px}
+body{margin:0;color:#111;background:#fff;font:15px/1.7 -apple-system,BlinkMacSystemFont,"PingFang SC","Hiragino Sans","Microsoft YaHei",sans-serif}
+a{color:inherit;text-underline-offset:4px}
+button{font:inherit;cursor:pointer}
+img{display:block;max-width:100%}
+h1,h2,h3{letter-spacing:-.03em;line-height:1.2;margin:0}
+.wrap{max-width:1280px;width:calc(100% - 56px);margin:auto}
+nav{position:sticky;top:0;z-index:20;background:#fffffff2;border-bottom:1px solid #e2e2e2;backdrop-filter:blur(6px)}
+nav .wrap{display:flex;align-items:center;gap:22px;min-height:60px;flex-wrap:wrap}
+nav img{width:80px}
+nav .links{margin-left:auto;display:flex;gap:20px;font-size:13px}
+nav .links a{text-decoration:none}
+.eyebrow{font-size:11px;letter-spacing:.16em;color:#777;text-transform:uppercase}
+header{padding:44px 0 30px}
+header h1{font-size:clamp(32px,4.4vw,58px);margin:14px 0 18px}
+.decl{font-size:26px;margin:0}
+.decl-zh{color:#666;margin:2px 0 20px}
+.lead{max-width:880px;font-size:16px}
+.legend{display:flex;gap:10px;flex-wrap:wrap;margin-top:18px}
+.tg{display:inline-flex;align-items:center;gap:6px;font-size:11px;padding:3px 9px;border-radius:2px;border:1px solid #bbb;color:#333;background:#fff;white-space:nowrap}
+.tg:before{content:"";width:7px;height:7px;border-radius:50%;background:currentColor}
+.tg.ui{color:#0d0d0d;border-color:#0d0d0d}
+.tg.cover{color:#6b4f1d;border-color:#c9a86a}
+.tg.ai{color:#7a2a2a;border-color:#d39a9a}
+.tg.mock{color:#2f4a63;border-color:#93aac0;border-style:dashed}
+.tg.post{color:#555;border-color:#aaa}
+.tg.dom{color:#2f5d3a;border-color:#8fb79a}
+section{padding:40px 0;border-top:1px solid #e2e2e2}
+h2{font-size:28px;margin-bottom:18px}
+.muted{color:#666;font-size:13px}
+
+/* ---------- player ---------- */
+.player{background:#000;border-radius:4px;overflow:hidden}
+.stage-box{position:relative;width:100%;aspect-ratio:16/9;overflow:hidden;background:#050505}
+.stage{position:absolute;left:0;top:0;width:1600px;height:900px;transform-origin:0 0;overflow:hidden;background:#070708;color:#fff;font-family:"Hiragino Sans","PingFang SC",sans-serif}
+.L{position:absolute;left:0;top:0;will-change:transform,opacity}
+.vp{overflow:hidden;border-radius:6px;background:#111}
+.vp>img{position:absolute;left:0;top:0;max-width:none;transform-origin:0 0}
+.vp.full{border-radius:0}
+.vp .cap{position:absolute;left:10px;top:8px;font-size:13px;background:#000a;padding:2px 8px;border-radius:3px;letter-spacing:.04em}
+.imgc{overflow:hidden;border-radius:8px;background:#111}
+.imgc>img{width:100%;height:100%;object-fit:cover}
+.badge{position:absolute;right:8px;bottom:8px;background:#000c;border:1px solid #fff4;font:600 14px Manrope,sans-serif;padding:3px 8px;border-radius:4px}
+.badge.tl{right:auto;bottom:auto;left:8px;top:8px;font-weight:500;font-size:12px}
+.hl{font-weight:700;font-size:62px;line-height:1.35;text-align:center;letter-spacing:.02em;text-shadow:0 2px 24px #000a}
+.hl.xl{font-size:78px}
+.hl.left{text-align:left}
+.ov{font-size:20px;letter-spacing:.18em;color:#cfcfcf;text-align:center}
+.shade{background:radial-gradient(ellipse at center,#0007 0%,#000c 75%)}
+.black{background:#000}
+.callout{border:3px solid #fff;border-radius:10px;box-shadow:0 0 0 4000px #0006}
+.callout.soft{box-shadow:none}
+.callout>span{position:absolute;left:-3px;bottom:calc(100% + 10px);white-space:nowrap;background:#fff;color:#000;font-size:19px;font-weight:600;padding:5px 12px;border-radius:4px}
+.callout.below>span{bottom:auto;top:calc(100% + 10px)}
+.chip{background:#1b1b1f;border:1px solid #ffffff2e;border-radius:10px;padding:12px 18px;font-size:24px;font-weight:600;display:flex;flex-direction:column;justify-content:center}
+.chip small{display:block;font:500 15px Manrope,sans-serif;color:#9a9aa3;margin-top:2px}
+.chip.light{background:#fff;color:#000}
+.chip.dom{font-size:18px;font-weight:500;background:#101012;border-style:dashed}
+.form{background:#141418;border:1.5px dashed #7f97ad;border-radius:14px}
+.form .fh{position:absolute;left:24px;top:18px;right:24px;font-size:20px;color:#d9d9de;display:flex;justify-content:space-between}
+.form .fh i{font-style:normal;font-size:13px;color:#93aac0}
+.form .slot{position:absolute;left:24px;right:24px;border:1px solid #ffffff26;border-radius:8px;background:#0c0c0f;color:#6c6c75;font-size:16px;padding:0 14px;display:flex;align-items:center}
+.form .btn{position:absolute;left:50%;bottom:26px;transform:translateX(-50%);background:#d9c8ff;color:#160d33;border-radius:8px;padding:10px 40px;font-size:20px;font-weight:700}
+.typ{font-size:26px;color:#fff;font-weight:600;white-space:nowrap;overflow:hidden}
+.typ:after{content:"";display:inline-block;width:2px;height:26px;background:#d9c8ff;margin-left:3px;vertical-align:-4px}
+.frame{border:2px solid #ffffffd0;border-radius:14px}
+.tcard{background:#151518;border:1px solid #ffffff22;border-radius:10px;padding:20px;display:flex;flex-direction:column;gap:10px}
+.tcard b{font:700 22px Manrope,sans-serif}
+.tcard em{font-style:normal;font-size:12px;color:#8fb79a;border:1px dashed #8fb79a;align-self:flex-start;padding:1px 6px;border-radius:3px}
+.row6{display:flex;gap:40px;align-items:flex-start}
+.row6 .it{width:260px;flex:none}
+.row6 .pic{width:260px;height:462px;border-radius:10px;overflow:hidden;position:relative;background:#151518}
+.row6 .pic img{width:100%;height:100%;object-fit:cover}
+.row6 .fl{margin-top:14px;font-size:17px;line-height:1.5;color:#ddd}
+.row6 .fl b{display:block;font:700 16px Manrope,sans-serif;color:#fff}
+.dots{background-color:#0b0b0d;background-image:radial-gradient(#ffffff22 1.2px,transparent 1.2px);background-size:28px 28px}
+.node{background:#17171b;border:1.5px dashed #7f97ad;border-radius:12px;padding:16px 18px;font-size:16px;color:#aeb6c0}
+.node b{display:block;color:#fff;font-size:24px;margin-top:6px}
+.wall{display:flex;flex-direction:column;gap:20px;align-items:center}
+.wall .r{display:flex;gap:20px}
+.wall .tile{width:230px;height:316px;border-radius:8px;overflow:hidden;background:#151518}
+.wall .tile img{width:100%;height:100%;object-fit:cover}
+.word{font:700 104px Manrope,sans-serif;letter-spacing:.06em;text-align:center}
+.tagline{font-size:34px;text-align:center;letter-spacing:.06em}
+.url{font:500 24px Manrope,sans-serif;color:#aaa;text-align:center;letter-spacing:.08em}
+.cursor{width:46px;height:46px;pointer-events:none}
+.ring{border:3px solid #fff;border-radius:50%}
+.subs{position:absolute;left:0;right:0;bottom:26px;text-align:center;pointer-events:none;transition:opacity .15s}
+.subs .ja{display:inline-block;font-size:30px;font-weight:600;background:#000b;padding:4px 16px;border-radius:4px}
+.subs .zh{font-size:19px;color:#ddd;margin-top:6px;text-shadow:0 1px 6px #000}
+.tagbar{position:absolute;left:18px;top:16px;display:flex;flex-direction:column;gap:6px;align-items:flex-start;pointer-events:none}
+.tagbar .tg{font-size:15px;background:#000c;padding:4px 10px}
+.tagbar .tg.ui{color:#fff;border-color:#fff}
+.tagbar .tg.cover{color:#f0d28f}
+.tagbar .tg.ai{color:#f4b2b2}
+.tagbar .tg.mock{color:#b8cfe6}
+.tagbar .tg.post{color:#ccc}
+.tagbar .tg.dom{color:#a9d6b5}
+.tc{position:absolute;right:18px;top:14px;font:600 18px Manrope,monospace;color:#fffc;background:#000a;padding:3px 10px;border-radius:3px}
+.controls{display:flex;align-items:center;gap:14px;padding:12px 16px;background:#111;color:#eee}
+.controls button{background:#fff;color:#000;border:0;border-radius:3px;padding:6px 14px;font-weight:600;min-width:84px}
+.controls input[type=range]{flex:1;accent-color:#fff}
+.controls .time{font:600 14px Manrope,monospace;min-width:110px;text-align:right}
+.controls label{font-size:12px;display:flex;gap:6px;align-items:center;white-space:nowrap}
+.ruler{display:flex;background:#111;padding:0 16px 14px}
+.ruler button{flex:1;border:0;border-left:1px solid #000;background:#2a2a2e;color:#bbb;font-size:11px;padding:6px 2px;text-align:left;overflow:hidden;white-space:nowrap}
+.ruler button.on{background:#fff;color:#000}
+.now{display:grid;grid-template-columns:110px 1fr 1fr;gap:20px;padding:18px 0;border-bottom:1px solid #e2e2e2}
+.now .no{font-size:40px;font-weight:700;line-height:1}
+.now h3{font-size:20px;margin-bottom:6px}
+.now p{margin:0 0 4px;font-size:14px}
+
+/* ---------- shots ---------- */
+.shot{border-top:1px solid #d6d6d6;padding:28px 0 32px;scroll-margin-top:70px}
+.shot-head{display:flex;gap:18px;align-items:baseline;flex-wrap:wrap;margin-bottom:16px}
+.shot-head .no{font-size:30px;font-weight:700}
+.shot-head .tm{font:600 14px Manrope,monospace;color:#555}
+.shot-head h3{font-size:23px}
+.shot-head .pv{margin-left:auto;background:#111;color:#fff;border:0;border-radius:3px;padding:7px 16px}
+.states{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.mini{position:relative}
+.mini .mbox{position:relative;width:100%;aspect-ratio:16/9;overflow:hidden;background:#050505;border-radius:3px}
+.mini .lab{font-size:12px;color:#555;margin-top:6px}
+.mini .lab b{color:#111}
+.cols{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px;margin-top:18px}
+.cols h4{font-size:12px;letter-spacing:.08em;color:#777;margin:0 0 6px;font-weight:600}
+.cols p{margin:0 0 8px;font-size:14px}
+.cols code{font-size:12px;background:#f2f2f2;padding:1px 5px;border-radius:2px;word-break:break-all}
+.vo{margin-top:16px;display:grid;grid-template-columns:1fr 1fr;gap:20px;border-top:1px solid #eee;padding-top:14px}
+.vo .ja{font-size:20px}
+.vo .zh{color:#666}
+.refs{display:flex;gap:16px;flex-wrap:wrap;margin-top:14px}
+.ref{display:grid;grid-template-columns:150px 1fr;gap:12px;text-decoration:none;max-width:560px;border:1px solid #e6e6e6;padding:8px;border-radius:3px}
+.ref img{width:150px;aspect-ratio:16/9;object-fit:cover;background:#eee}
+.ref b{font-size:13px;display:block}
+.ref span{font-size:12px;color:#666;display:block;line-height:1.6}
+.st{font-size:11px;padding:2px 7px;border-radius:2px;margin-left:6px;vertical-align:2px}
+.st.v{background:#111;color:#fff}.st.p{background:#e8eef3;color:#2f4a63}.st.n{background:#f3e9e9;color:#7a2a2a}
+table{border-collapse:collapse;width:100%;font-size:13px}
+th,td{border-top:1px solid #e2e2e2;padding:9px 10px;text-align:left;vertical-align:top}
+th{font-size:12px;color:#777;font-weight:600}
+.gaps li{margin-bottom:8px}
+.big{display:inline-block;background:#111;color:#fff;text-decoration:none;padding:10px 18px;margin-top:8px}
+footer{padding:28px 0;font-size:12px;color:#777;border-top:1px solid #e2e2e2}
+@media(max-width:860px){.wrap{width:calc(100% - 28px)}.states,.vo{grid-template-columns:1fr}.cols{grid-template-columns:1fr}.now{grid-template-columns:1fr}.ruler button{font-size:0}.controls label{display:none}}
+@media print{nav,.controls,.ruler,.shot-head .pv{display:none}.shot{break-inside:avoid}}
+</style>
+<link rel="stylesheet" href="../../../one2x-material.css"><style>body.one2x-updated-proposal{font-family:var(--one2x-font,sans-serif);background:#fff;color:#171717}body.one2x-updated-proposal>.wrap{max-width:1240px}body.one2x-updated-proposal>header:not(#one2x-material-nav){padding:44px 0}body.one2x-updated-proposal>.legend{font-size:14px}body.one2x-updated-proposal nav .wrap{min-height:52px}body.one2x-updated-proposal .lead{font-size:20px}body.one2x-updated-proposal .muted{font-size:15px}body.one2x-updated-proposal .cols p,body.one2x-updated-proposal .vo .zh,body.one2x-updated-proposal .gaps{font-size:18px}body.one2x-updated-proposal .stage .subs .zh{font-size:23px}body.one2x-updated-proposal section h2{font-size:34px}@media(max-width:650px){body.one2x-updated-proposal .lead{font-size:18px}body.one2x-updated-proposal section h2{font-size:28px}}</style></head>
+<body class="one2x-updated-proposal"><aside style="padding:18px 5%;background:#f6f6f6;border-bottom:1px solid #ddd;font:16px/1.7 sans-serif"><strong>当前脚本已更新为 AE 原生 v6 · 60 秒七段。</strong> <a href="KAIROS-当前脚本.html" style="font-weight:700">查看当前脚本与下载全文 →</a><br><small>本页作为前序资料保留，原参考链接与锚点仍可使用。</small></aside><header id="one2x-material-nav"><a class="one2x-brand" href="../../../index.html#concept"><img src="../../../assets/one2x-wordmark.svg" alt="One2X"><span class="one2x-material-label">KAIROS / 实机功能与宣传片方案</span></a><a class="one2x-back" href="../../../index.html#concept">返回制作报告</a></header>
+<nav><div class="wrap">
+  
+  <span class="eyebrow">KAIROS · 60s · Claude 完善版</span>
+  <div class="links"><a href="#preview">60秒预演</a><a href="#shots">11镜分镜</a><a href="#coverage">功能覆盖</a><a href="#gaps">素材缺口</a><a href="references-28.html">28片参考库 ↗</a></div>
+</div></nav>
+
+<header><div class="wrap">
+  <span class="eyebrow">AI 产品宣传片 · 日语旁白＋中文 · 60秒 / 11镜</span>
+  <h1>一支香水，从模板走到成片。</h1>
+  <p class="decl" lang="ja">日本のビジネスに、映像の力を。</p>
+  <p class="decl-zh">让日本的商业，拥有影像的力量。</p>
+  <p class="lead">主线只用网站上看得到的功能：模板库 → 读懂所需素材字段、片长与预计积分 → 按字段填入原料／瓶身／标志 → AI 出片 → 其它模板的字段广度 → 新建作品三种模式 → 无限画布生成链路。同一只玻璃瓶贯穿全片；画面整体向左流动，每镜由上一镜的卡片或窗口接力进入。</p>
+  <div class="legend">
+    <span class="tg ui">真实UI截图</span><span class="tg cover">官方模板封面</span><span class="tg dom">DOM字段文字</span><span class="tg ai">AI示意素材</span><span class="tg mock">示意界面／操作层·待实录</span><span class="tg post">后期排版层</span>
+  </div>
+  <p class="muted" style="margin-top:12px">预演中每一帧左上角都标出当前画面用了哪类素材。示意层和 AI 静帧都不是 KAIROS 的生成结果；正式片里的成片画面必须换成 KAIROS 实际输出。</p>
+</div></header>
+
+<section id="preview"><div class="wrap">
+  <h2>60秒动态预演</h2>
+  <div class="player">
+    <div class="stage-box" id="mainBox"></div>
+    <div class="controls">
+      <button id="play">▶ 播放</button>
+      <input id="scrub" type="range" min="0" max="60" step="0.01" value="0" aria-label="时间轴">
+      <span class="time" id="time">0:00.0 / 1:00</span>
+      <label><input type="checkbox" id="loop"> 循环当前镜</label>
+    </div>
+    <div class="ruler" id="ruler"></div>
+  </div>
+  <div class="now" id="now"></div>
+  <p class="muted">空格键：播放／暂停；← →：前后 1 秒。点时间条上的镜号可以跳转；分镜卡里的“▶ 预演本镜”只循环播放这一镜。</p>
+</div></section>
+
+<section id="shots"><div class="wrap">
+  <h2>11镜分镜</h2>
+  <div id="shotList"></div>
+</div></section>
+
+<section id="coverage"><div class="wrap">
+  <h2>功能核验</h2>
+  <p class="muted">完整清单：<a href="claude-refine-2026-11-05/function-coverage.json">功能核验清单</a>。“可见”指截图或 DOM 里有这个入口或字段，不代表跑通了生成流程；本轮没有执行任何付费生成。</p>
+  <table id="covTable"></table>
+</div></section>
+
+<section id="gaps"><div class="wrap">
+  <h2>待补材料</h2>
+  <ol class="gaps">
+    <li><b>日文界面实录</b>：现有截图只有英文公开页和中文登录页。日本版需要用日文界面重录（如果有日文界面）；没有的话，统一用一种界面语言，并加日文字幕说明。</li>
+    <li><b>模板表单界面</b>（点击“用这个模板”之后的页面）：S04 目前是示意界面，字段文字取自 DOM。</li>
+    <li><b>KAIROS 实际输出</b>：S05 / S08 / S09 / S10 的“成片”位置，需要用客户商品跑一次 Perfume Ad Reveal（或客户指定的模板）拿到实际输出；在那之前，播放器里只放官方封面和 AI 关键帧，并按示意标注。</li>
+    <li><b>主载体商品</b>：AI 关键帧上的瓶子标签写的是“美容液”，和香水模板对不上，要换成客户的香水，或重新生成标签。品牌 logo 由客户提供。</li>
+    <li><b>无限画布干净实录</b>：05-canvas.png 截图时会话已过期，中部有弹窗。需重新截取画布全貌，并在实际运行“搭建生成链路”时录屏。</li>
+    <li><b>对话成片、视频剪辑的内部界面</b>：目前只核验到入口。如需更多镜头，要补录内部界面，并按实录结果修改旁白。</li>
+    <li><b>录制账号</b>：测试账号的最近使用列表里有“冒烟检查”等测试项目，正式录制要换成干净账号，并隐去积分余额。</li>
+    <li>Hotel Girls Trip、Product Bullet Time J、Pop Art Product J、Retro Tokusatsu Promo 没有本地封面，S06 暂用字段卡代替，需要补抓封面。</li>
+  </ol>
+  <a class="big" href="references-28.html">打开完整 28 片参考库 ↗</a>
+</div></section>
+
+<footer><div class="wrap">One2X / KAIROS · 60秒宣传片 Claude 完善版 · 2026-11-05 · 诊断：claude-refine-2026-11-05/diagnosis.txt · <a href="../../../index.html#concept">返回制作报告</a></div></footer>
+
+<script>
+(()=>{
+const K='claude-refine-2026-11-05/website/', V='claude-refine-2026-11-05/assets/', A='site-audit-2026-11-05/';
+const IMG={explore:A+'01-explore.png',ads:'claude-refine-2026-11-05/assets/kairos-ads.jpg',chrome:A+'02-chrome-explore.png',modes:A+'03-create-modes.png',canvas:A+'05-canvas.png',
+  bottle:V+'KAIROS-商品微距-关键帧-v1.png',office:V+'KAIROS-企划室-关键帧-v1.png',logo:K+'assets/kairos-logo.png'};
+const cov=n=>K+'assets/'+n+'.jpg';
+const SZ={explore:[1280,720],ads:[1280,720],chrome:[2000,976],modes:[2000,976],canvas:[2000,976],bottle:[1672,941],office:[1672,941]};
+const k=(t,p)=>Object.assign({t},p);
+const CUR='<svg viewBox="0 0 24 24" width="46" height="46"><path d="M4 2l15 11.5-6.6.9 3.9 7.4-3 1.5-3.9-7.5L4 20.5z" fill="#fff" stroke="#000" stroke-width="1.4" stroke-linejoin="round"/></svg>';
+
+/* ---------------- layer spec ---------------- */
+const L=[];
+const add=(o)=>{L.push(o);return o};
+const vp=(id,img,keys,tag,cap)=>add({id,type:'vp',img,keys,tag,cap});
+const box=(id,cls,html,keys,tag)=>add({id,type:'box',cls,html,keys,tag});
+const pic=(id,src,keys,tag,html)=>add({id,type:'pic',src,keys,tag,html});
+const ring=(id,t,x,y)=>box(id,'ring','',[k(t,{x,y,w:24,h:24,o:0}),k(t+.04,{o:1}),k(t+.45,{w:130,h:130,o:0,e:'out'})]);
+const cursor=(id,keys)=>add({id,type:'box',cls:'cursor',html:CUR,keys:keys.map(q=>Object.assign({w:46,h:46},q)),off:[20,21]});
+const T_UI=(f,n)=>({k:'ui',t:'真实UI截图 · '+f+(n?'（'+n+'）':'')});
+const T_AI=(n)=>({k:'ai',t:'AI示意 · '+n});
+const T_CV=(n)=>({k:'cover',t:'官方模板封面 · '+n});
+const T_MK=(n)=>({k:'mock',t:'示意层 · '+n});
+const T_PO=(n)=>({k:'post',t:'后期排版 · '+n});
+const T_DM=(n)=>({k:'dom',t:'DOM字段 · '+n});
+
+/* S08 canvas ground (drawn first) */
+box('cvbg','dots','',[k(40.0,{x:800,y:450,w:1600,h:900,o:0}),k(40.4,{o:1}),k(45.7,{}),k(46.3,{o:0})],T_MK('画布底纹'));
+
+/* S01 宣言 0–5 */
+vp('b1','bottle',[k(0,{x:800,y:420,w:560,h:315,cx:836,cy:470,zw:1672,o:0}),k(.6,{o:1}),k(2.4,{w:680,h:383}),k(3.3,{x:800,y:450,w:1600,h:900,cx:1040,cy:450,zw:1250}),k(4.7,{cx:1060,zw:1150}),k(5.4,{x:-800,e:'in'})],T_AI('商品微距关键帧（主载体瓶）'));
+box('sh1','shade','',[k(3.0,{x:800,y:450,w:1600,h:900,o:0}),k(3.4,{o:1}),k(4.9,{}),k(5.3,{o:0})]);
+box('t1a','hl','伝えたいことは、ある。',[k(.4,{x:800,y:690,w:1300,o:0}),k(.9,{y:672,o:1}),k(2.1,{}),k(2.5,{y:650,o:0})]);
+box('t1b','hl xl left','日本のビジネスに、<br>映像の力を。',[k(2.9,{x:560,y:430,w:900,o:0}),k(3.5,{x:600,o:1,e:'out'}),k(4.8,{x:620}),k(5.25,{x:250,o:0,e:'in'})]);
+
+/* S02 模板库 5–10 */
+vp('u1','explore',[k(4.9,{x:2400,y:450,w:1600,h:900,cx:640,cy:360,zw:1280,o:1}),k(5.7,{x:800,e:'out'}),k(6.9,{}),k(7.7,{cx:420,cy:190,zw:760}),k(8.0,{}),k(8.25,{o:0})],T_UI('01-explore.png','公开页'));
+vp('u1b','ads',[k(8.0,{x:800,y:450,w:1600,h:900,cx:420,cy:190,zw:760,o:0}),k(8.25,{o:1}),k(8.7,{}),k(9.5,{cx:660,cy:440,zw:900}),k(10.0,{}),k(10.4,{o:0})],T_UI('assets/kairos-ads.jpg','Ads 已选中'));
+box('h2a','callout soft below','<span>三步：选模板 → 填素材 → AI 出片</span>',[k(5.8,{x:980,y:175,w:1230,h:66,o:0}),k(6.0,{o:1}),k(6.6,{}),k(6.8,{o:0})]);
+box('h2b','callout soft below','<span>搜索模板</span>',[k(6.5,{x:1437,y:250,w:310,h:52,o:0}),k(6.7,{o:1}),k(7.2,{}),k(7.4,{o:0})]);
+box('h2c','callout below','<span>分类 · Ads</span>',[k(7.8,{x:695,y:471,w:160,h:80,o:0}),k(8.0,{o:1}),k(8.8,{}),k(9.1,{o:0})]);
+box('h2d','callout','<span>Perfume Ad Reveal</span>',[k(9.5,{x:800,y:453,w:424,h:744,o:0}),k(9.7,{o:1}),k(10.15,{o:0})]);
+cursor('c2',[k(5.9,{x:1700,y:820,o:0}),k(6.3,{x:1500,y:330,o:1}),k(6.9,{x:1450,y:262}),k(7.5,{x:900,y:580}),k(7.95,{x:705,y:483}),k(8.6,{}),k(9.4,{x:930,y:640}),k(9.8,{x:830,y:520}),k(10.3,{o:0})]);
+ring('r2a',8.0,705,483);ring('r2b',9.85,830,520);
+
+/* S03 读懂字段 10–16 */
+pic('cp',cov('Perfume-Ad-Reveal'),[k(9.95,{x:800,y:453,w:412,h:732,o:0}),k(10.15,{o:1}),k(10.9,{x:430,y:450,w:360,h:640}),k(15.8,{}),k(16.4,{x:330,w:330,h:587}),k(22.8,{}),k(23.5,{x:-300,o:0,e:'in'})],T_CV('Perfume Ad Reveal'),'<span class="badge tl">模板</span>');
+box('t3','ov','所需素材 · MATERIALS NEEDED',[k(10.9,{x:1060,y:230,w:640,o:0}),k(11.2,{o:1}),k(13.0,{}),k(13.4,{o:0})],T_DM('02-chrome-explore-dom.txt'));
+const F=[['① 填写原料','write your ingredient',330,300,240],['② 上传香水产品图片','Upload perfume product',430,380,370],['③ 填写品牌标志','write brand logo',530,460,550]];
+F.forEach((f,i)=>box('f'+i,'chip','<span>'+f[0]+'</span><small>'+f[1]+'</small>',[
+  k(11.0+i*.25,{x:1320,y:f[2],w:600,h:80,o:0}),k(11.5+i*.25,{x:1060,o:1,e:'out'}),k(13.1,{}),k(13.6,{y:f[3],s:.86}),k(15.8,{}),k(16.6,{x:1060,y:f[4],w:560,h:56,s:1}),k(22.8,{}),k(23.4,{x:-300,o:0,e:'in'})]));
+[['Clock-Of-Bags','8秒 · ≈25'],['Flavor-Diorama-Ad','25秒 · ≈50'],['Awakening-the-Beast','15秒 · ≈100']].forEach((c,i)=>pic('bd'+i,cov(c[0]),[
+  k(13.2+i*.15,{x:1720,y:650,w:180,h:210,o:0}),k(13.8+i*.15,{x:860+i*200,o:1,e:'out'}),k(15.5,{}),k(15.9,{y:720,o:0})],T_CV(c[0].replace(/-/g,' ')+' 等'),'<span class="badge">'+c[1]+'</span>'));
+box('t3b','ov','片长 · 预计积分（部分模板显示）',[k(14.0,{x:1060,y:790,w:700,o:0}),k(14.3,{o:1}),k(15.5,{}),k(15.9,{o:0})]);
+
+/* S04 填素材 16–23 */
+box('fm','form','<div class="fh">香水广告揭晓 · 填入素材 <i>示意界面 · 待实录</i></div><div class="slot" style="top:130px;height:56px"></div><div class="slot" style="top:260px;height:130px;justify-content:flex-end">拖入商品图</div><div class="slot" style="top:440px;height:64px;justify-content:flex-end">上传标志</div><div class="btn">生成 ▶</div>',
+  [k(15.9,{x:1060,y:450,w:640,h:660,o:0}),k(16.4,{o:1}),k(22.8,{}),k(23.4,{x:-300,o:0,e:'in'})],T_MK('模板表单（字段取自 DOM）'));
+add({id:'ty',type:'type',cls:'typ',text:'柚子、白檀、ジャスミン',keys:[k(16.8,{x:1040,y:313,w:520,p:0,o:0}),k(16.9,{o:1}),k(18.3,{p:1,e:'lin'}),k(22.8,{}),k(23.4,{x:-300,o:0,e:'in'})]});
+vp('bc','bottle',[k(18.2,{x:1750,y:470,w:150,h:150,cx:1075,cy:420,zw:560,o:0}),k(18.4,{o:1}),k(19.3,{x:880,y:465,e:'out'}),k(22.8,{}),k(23.4,{x:-300,o:0,e:'in'})],T_AI('商品图（同一瓶）'));
+box('lg','chip light','<span style="font:700 20px Manrope,sans-serif;letter-spacing:.2em">BRAND LOGO</span>',[k(19.7,{x:1750,y:612,w:220,h:56,o:0}),k(19.9,{o:1}),k(20.5,{x:880,e:'out'}),k(22.8,{}),k(23.4,{x:-300,o:0,e:'in'})],T_MK('客户标志占位'));
+cursor('c4',[k(18.0,{x:1650,y:760,o:0}),k(18.3,{x:1760,y:480,o:1}),k(19.3,{x:890,y:475,e:'out'}),k(19.7,{x:1760,y:625}),k(20.5,{x:890,y:622,e:'out'}),k(21.3,{x:1070,y:742}),k(22.1,{}),k(22.5,{o:0})]);
+ring('r4',21.5,1060,736);
+
+/* S05 出片 23–28.5 */
+const PK=[k(21.6,{x:1060,y:736,w:220,h:56,o:0}),k(21.9,{o:1}),k(22.9,{x:800,y:450,w:500,h:860}),k(26.4,{}),k(27.3,{w:506,h:900}),k(28.4,{}),k(29.1,{x:260,y:450,w:260,h:462}),k(29.5,{o:0})];
+pic('pc',cov('Perfume-Ad-Reveal'),[k(22.6,{x:800,y:450,w:500,h:860,o:0}),k(23.0,{o:1}),k(25.2,{}),k(25.8,{o:0})],T_CV('Perfume Ad Reveal（风格示意，非本次生成）'));
+vp('pb','bottle',[k(25.2,{x:800,y:450,w:500,h:860,cx:1075,cy:470,zw:560,o:0}),k(25.8,{o:1}),k(26.4,{}),k(27.3,{w:506,h:900,zw:500}),k(28.4,{zw:480}),k(29.1,{x:260,y:450,w:260,h:462,zw:500}),k(29.6,{o:0})],T_AI('商品画面（正式片替换为 KAIROS 输出）'));
+box('pf','frame','',PK);
+box('t5','ov','PERFUME AD REVEAL',[k(23.2,{x:300,y:450,w:420,o:0}),k(23.6,{o:1}),k(24.9,{}),k(25.3,{o:0})]);
+
+/* S06 模板字段广度 28.5–34 */
+const R6=[
+ {pic:'B',name:'本片商品',f:'原料 · 产品图 · 标志'},
+ {pic:cov('Home-Appliance-Showcase'),name:'Home Appliance Showcase',f:'商品 ×4 · 每件：图片 / 品类 / interaction beat'},
+ {name:'Hotel Girls Trip',f:'酒店品牌名 · 数字人 1/2/3 · 酒店员工（选择）'},
+ {name:'Product Bullet Time J',f:'商品名与品类 · 外观 · 价格或促销语 · 卖点 tagline'},
+ {name:'Pop Art Product J',f:'商品图 · 强调色 · 收尾标语'},
+ {name:'Retro Tokusatsu Promo',f:'品牌名 · 商品参考图 · 核心痛点'}];
+const r6html=R6.map(r=>'<div class="it"><div class="pic">'+(r.pic==='B'?'<img src="'+IMG.bottle+'" style="object-position:64% 45%">':r.pic?'<img src="'+r.pic+'">':'<div class="tcard" style="height:100%"><em>DOM字段 · 无本地封面</em><b>'+r.name+'</b></div>')+'</div><div class="fl"><b>'+r.name+'</b>'+r.f+'</div></div>').join('');
+box('r6','row6',r6html,[k(29.0,{x:1030,y:519,w:1800,h:600,o:0}),k(29.4,{o:1}),k(33.6,{x:-60,e:'lin'}),k(34.2,{x:-520,o:0,e:'in'})],T_DM('01/02-explore-dom.txt ＋ 封面'));
+box('t6','ov','テンプレートごとの、素材項目。',[k(29.3,{x:800,y:110,w:900,o:0}),k(29.7,{o:1}),k(33.6,{}),k(34.0,{o:0})]);
+
+/* S07 新建作品 34–40 */
+vp('u2','chrome',[k(33.8,{x:2400,y:450,w:1600,h:900,cx:1000,cy:488,zw:2000,o:1}),k(34.5,{x:800,e:'out'}),k(35.25,{}),k(35.45,{o:0})],T_UI('02-chrome-explore.png','已登录'));
+vp('u3','modes',[k(35.2,{x:800,y:450,w:1600,h:900,cx:1000,cy:488,zw:2000,o:0}),k(35.45,{o:1}),k(35.8,{}),k(36.5,{cx:1000,cy:400,zw:1050}),k(39.5,{}),k(40.25,{cx:1000,cy:317,zw:300,o:0,e:'in'})],T_UI('03-create-modes.png','新建作品'));
+box('h7a','callout','<span>对话成片 · 聊天逐步完善</span>',[k(36.7,{x:325,y:389,w:470,h:400,o:0}),k(36.9,{o:1}),k(37.4,{}),k(37.6,{o:0})]);
+box('h7b','callout','<span>视频剪辑 · 多轨时间线 · 测试版</span>',[k(37.5,{x:1274,y:389,w:470,h:400,o:0}),k(37.7,{o:1}),k(38.2,{}),k(38.4,{o:0})]);
+box('h7c','callout','<span>无限画布 · 提示词＋参考素材 → 图片与视频</span>',[k(38.7,{x:800,y:389,w:470,h:400,o:0}),k(38.9,{o:1}),k(39.6,{}),k(39.9,{o:0})]);
+box('m7','chip dom','更多编辑器 (5)：文档 · 表格 · 白板 · 网页 · 脚本　<small style="display:inline">均为测试版 · 04-all-modes</small>',[k(37.9,{x:800,y:700,w:980,h:60,o:0}),k(38.2,{o:1}),k(39.5,{}),k(39.8,{o:0})],T_DM('04-all-modes-dom.txt'));
+cursor('c7',[k(34.4,{x:600,y:520,o:0}),k(34.7,{o:1}),k(35.1,{x:70,y:118}),k(35.6,{}),k(36.4,{x:420,y:600}),k(36.9,{x:340,y:470}),k(37.6,{x:1270,y:470}),k(38.6,{x:1080,y:600}),k(39.25,{x:812,y:410}),k(39.7,{}),k(40.0,{o:0})]);
+ring('r7a',35.15,62,112);ring('r7b',39.3,800,400);
+
+/* S08 无限画布链路 40–46 */
+vp('cv1','canvas',[k(40.3,{x:1220,y:170,w:616,h:204,cx:1710,cy:468,zw:560,o:0}),k(40.7,{o:1}),k(45.3,{}),k(45.7,{o:0})],T_UI('05-canvas.png 局部','助手建议'));
+vp('cv2','canvas',[k(40.5,{x:400,y:790,w:440,h:168,cx:630,cy:505,zw:340,o:0}),k(40.9,{o:1}),k(45.3,{}),k(45.7,{o:0})],T_UI('05-canvas.png 局部','生成入口'));
+box('m8','chip dom','文本 · 图片 · 视频 · 音乐 · 语音 生成　｜　从网盘导入（含本地上传）',[k(40.9,{x:1080,y:790,w:820,h:60,o:0}),k(41.2,{o:1}),k(45.3,{}),k(45.7,{o:0})],T_DM('05-canvas-dom.txt'));
+box('h8','callout soft','<span>搭建生成链路</span>',[k(41.0,{x:1072,y:235,w:300,h:70,o:0}),k(41.2,{o:1}),k(41.9,{}),k(42.2,{o:0})]);
+cursor('c8',[k(40.6,{x:1500,y:620,o:0}),k(40.9,{o:1}),k(41.35,{x:1090,y:248}),k(41.9,{}),k(42.6,{x:1450,y:700,o:0})]);
+ring('r8',41.4,1080,240);
+box('n1','node','文案<b>柚子と白檀の香り。<br>上品に。</b>',[k(41.6,{x:330,y:470,w:300,h:180,o:0,s:.9}),k(42.0,{o:1,s:1}),k(45.3,{}),k(45.8,{x:200,o:0})],T_MK('生成链路（未测试实际生成）'));
+const LN=(id,x1,x2,t)=>add({id,type:'line',d:'M'+x1+' 470 L'+x2+' 470',keys:[k(t,{x:800,y:450,w:1600,h:900,p:0,o:1}),k(t+.5,{p:1}),k(45.3,{}),k(45.6,{o:0})]});
+LN('l1',482,568,42.1);
+vp('n2','bottle',[k(42.5,{x:700,y:470,w:260,h:260,cx:1075,cy:420,zw:600,o:0,s:.9}),k(42.9,{o:1,s:1}),k(45.3,{}),k(45.8,{o:0})],T_AI('同一瓶'),'图片');
+LN('l2',832,948,43.0);
+vp('n3','bottle',[k(43.4,{x:1060,y:470,w:220,h:390,cx:1075,cy:460,zw:500,o:0,s:.9}),k(43.8,{o:1,s:1}),k(44.8,{}),k(45.9,{x:800,y:450,w:1600,h:900,cx:1075,cy:430,zw:1300}),k(46.4,{o:0})],null,'视频 ▶');
+
+/* S09 本土化 46–52 */
+vp('of','office',[k(45.9,{x:800,y:450,w:1600,h:900,cx:1205,cy:310,zw:720,o:0}),k(46.3,{o:1}),k(46.8,{}),k(48.6,{cx:836,cy:470,zw:1672,e:'out'}),k(51.6,{cx:820,zw:1620}),k(52.8,{x:800,y:450,w:230,h:316,cx:1215,cy:330,zw:420}),k(53.3,{o:0})],T_AI('企划室关键帧（屏内画面亦为生成示意）'));
+box('t9','hl left','日本の香りを、<br>日本の言葉で。',[k(48.6,{x:390,y:705,w:640,o:0}),k(49.2,{y:690,o:1,e:'out'}),k(51.5,{}),k(51.9,{o:0})],T_PO('日文标题（非 KAIROS 功能）'));
+box('c9','chip','柚子 · 白檀 · ジャスミン',[k(49.6,{x:1345,y:560,w:330,h:58,o:0}),k(50.0,{o:1}),k(51.5,{}),k(51.9,{o:0})],T_PO('原料标签'));
+
+/* S10 宣言再起 52–56.5 */
+const W=[['Retro-Beach-TVC','Perfume-Ad-Reveal','Clean-Demo-UGC','Awakening-the-Beast'],['Clock-Of-Bags','Flavor-Diorama-Ad','B','Home-Appliance-Showcase','Product-Display'],['Street-Cup-Vibes','Luxury-Cut-Reveal','Beauty-Haul-React-J']];
+const wall=W.map(r=>'<div class="r">'+r.map(n=>'<div class="tile">'+(n==='B'?'<img src="'+IMG.bottle+'" style="object-position:64% 45%">':'<img src="'+cov(n)+'">')+'</div>').join('')+'</div>').join('');
+box('wl','wall',wall,[k(52.6,{x:800,y:450,w:1230,h:988,s:1,o:0}),k(53.2,{o:1}),k(56.0,{s:.8,e:'out'}),k(56.6,{s:.76,o:0})],T_CV('×11 ＋ 中央 AI示意'));
+box('sh10','black','',[k(53.8,{x:800,y:450,w:1600,h:900,o:0}),k(54.3,{o:.62}),k(56.0,{}),k(56.6,{o:1}),k(60,{})]);
+box('t10','hl xl','企業の想いを、<br>伝わる映像に。',[k(53.9,{x:800,y:460,w:1300,o:0}),k(54.5,{y:440,o:1,e:'out'}),k(56.0,{}),k(56.4,{o:0})]);
+
+/* S11 落版 56.5–60 */
+pic('lo',IMG.logo,[k(56.5,{x:800,y:350,w:92,h:92,o:0,s:.9}),k(57.0,{o:1,s:1}),k(60,{})],T_UI('kairos-logo.png','官网 brand-kit'));
+L[L.length-1].cls='plain';
+box('wd','word','KAIROS',[k(56.7,{x:800,y:470,w:900,o:0}),k(57.2,{o:1}),k(60,{})]);
+box('tl','tagline','商業のための、映像制作AI。',[k(57.3,{x:800,y:580,w:900,o:0}),k(57.7,{o:1}),k(60,{})]);
+box('ur','url','kairos.video',[k(57.8,{x:800,y:640,w:600,o:0}),k(58.1,{o:1}),k(60,{})]);
+
+/* subtitles (日语VO / 中文) */
+const SUB=[[.4,2.3,'伝えたいことは、ある。','想传达的，早已在那里。'],[2.7,5.0,'日本のビジネスに、映像の力を。','让日本的商业，拥有影像的力量。'],
+[5.8,9.4,'つくりたい映像を、テンプレートから。','想做的影片，从模板开始。'],[10.4,15.6,'必要な素材も、尺も、目安のクレジットも。先にわかる。','需要什么素材、片长多少、大约几分积分，开始前就清楚。'],
+[16.4,19.4,'香りの原料、ボトル、ロゴ。','香气原料、瓶身、标志。'],[19.8,22.4,'項目に入れて、つくる。','按字段填进去，就开始制作。'],[23.2,25.0,'あとは、AIが映像に。','剩下的，交给 AI 成片。'],
+[28.8,33.8,'四つの商品も。複数の人物も。ブランドの色と、ひと言も。','四件商品、多位人物、品牌色和一句标语，都有对应字段。'],
+[34.4,39.6,'会話でつくる。キャンバスでつなぐ。タイムラインで整える。','用对话做，用画布串，用时间线修。'],
+[40.4,45.6,'言葉から画像へ、画像から映像へ。ひとつの流れで。','从文字到图片，从图片到影片，一条链路。'],
+[46.4,51.6,'柚子と白檀。日本の香りを、日本の言葉で。','柚子与白檀。用日本的语言，讲日本的香气。'],
+[53.8,56.0,'企業の想いを、伝わる映像に。','让企业的想法，成为能够传达的影像。'],[56.8,58.6,'商業のための、映像制作AI。KAIROS。','为商业而生的视频制作 AI。KAIROS。']];
+
+/* ---------------- shots ---------------- */
+const RF={3:['krea-ad-studio','Krea','Ad Studio — ads from a brand link',17.38],7:['kimi-k31-pro','Kimi','Meet Kimi K3.1 Pro',46.87],11:['minimax-space-bunny','MiniMax','M3.1 Flash — Space Bunny',12.42],13:['claude-motion','Anthropic','Claude Dashboards and Claude Motion',40.81],15:['comfy-agent','ComfyUI','Comfy Agent in Comfy Cloud',22.57],16:['gemini-skills','Google','Introducing skills in the Gemini app',23.7],17:['chatgpt-space','OpenAI','Introducing ChatGPT Space',30.0],21:['jp-bakuraku','LayerX バクラク','バックオフィスに、自動運転を。',30.05],26:['jp-kaonavi-kti','カオナビ','タレントインテリジェンスへ',30.05],28:['jp-usonar-un','uSonar','Do you know, u脳? 30秒',15.02]};
+const S=[
+{n:'01',a:0,b:5,snap:[.9,4.3],title:'宣言｜伝えたいことは、ある。',st:'n',stl:'无功能',
+ func:'不展示功能，只建立商业定位和主载体（玻璃瓶）。',path:'—',
+ change:'起：黑场中一扇小窗，里面是瓶身微距，下方出现“伝えたいことは、ある。”。止：窗口推满全屏，压暗，左对齐大字“日本のビジネスに、映像の力を。”，整组向左甩出。',
+ ai:'商品微距关键帧，从小窗缓推到满屏（区域向瓶口偏移），5.0s 起随甩镜向左离场。',
+ refs:[[11,'低角度商品英雄镜，品牌字直接落在物体上 → 本镜瓶身推近、大字压在瓶上']]},
+{n:'02',a:5,b:10,snap:[6.2,9.8],title:'模板库｜从想做的影片开始',st:'v',stl:'界面可见',
+ func:'模板库、三步引导、搜索框、分类筛选 Ads、模板卡。',path:'侧栏 模板库 /explore → 分类 Ads → Perfume Ad Reveal 卡',
+ change:'起：真实模板库整页从右侧推入，依次框出三步引导和搜索框。止：镜头推到分类栏，光标点 Ads，画面换成真实的 Ads 选中状态；再推到 Perfume Ad Reveal 卡并点击。',
+ ai:'无。卡片封面是官方模板封面。',
+ refs:[[16,'大号光标点击、按钮光晕 → Ads 和模板卡的点击']]},
+{n:'03',a:10,b:16,snap:[11.9,15.0],title:'读懂模板｜素材、片长、积分',st:'v',stl:'界面可见',
+ func:'模板卡上的“所需素材”结构化字段，以及部分模板显示的片长和预计积分。',path:'模板卡 · 所需素材（DOM 文字）；Clock Of Bags 8秒≈25 / Flavor Diorama Ad 25秒≈50 / Awakening the Beast 15秒≈100',
+ change:'起：被点击的香水卡从网格里浮出，移到左侧。止：右侧弹出三条字段（原料／香水产品图／品牌标志），然后上移；下方滑入三张带“片长·积分”角标的真实封面。',
+ ai:'无。香水卡本身没有显示积分，所以积分只放在另外三张模板卡上。',
+ refs:[[15,'标签加箭头指向节点 → 把模板卡拆成字段标注']]},
+{n:'04',a:16,b:23,snap:[17.8,21.6],title:'填入素材｜原料、瓶身、标志',st:'p',stl:'示意界面',
+ func:'按模板字段填素材，然后点“生成”。',path:'用这个模板 → 素材表单（待实录）',
+ change:'起：三条字段落进右侧表单，变成行标题，原料栏开始打字“柚子、白檀、ジャスミン”。止：同一只瓶的商品图从右侧拖进图片栏，标志占位落进标志栏，光标点“生成”。',
+ ai:'商品图是主载体瓶的方形裁切，从画外右侧被拖进栏位，后面几镜一直沿用这只瓶。',
+ refs:[[13,'浮层输入卡压在内容上 → 表单浮在封面右侧'],[16,'光标点提交 → 点击“生成”']]},
+{n:'05',a:23,b:28.5,snap:[23.8,27.4],title:'AI 出片｜给结果留出观看时间',st:'p',stl:'示意素材',
+ func:'模板出片结果。',path:'生成 → 播放器（界面待实录）',
+ change:'起：“生成”按钮展开成竖版播放框，先放官方封面的风格。止：换成本片商品画面，播放框长到满高，约 2.6 秒内不叠加任何信息，只给观看时间。',
+ ai:'25.2s 起，AI 瓶身竖版裁切缓推；正式片这里必须换成 KAIROS 实际输出。',
+ refs:[[7,'软件窗口里放成片，加角标说明 → 播放框内出片'],[11,'商品英雄镜 → 成片质感']]},
+{n:'06',a:28.5,b:34,snap:[29.8,33.2],title:'模板广度｜每个模板有自己的字段',st:'v',stl:'DOM可见',
+ func:'不同模板的结构化字段：四商品＋interaction beat、多个数字人选择、价格／卖点、强调色／收尾标语、核心痛点。',path:'模板库各卡 · 所需素材',
+ change:'起：播放框缩成传送带上的第一张卡（就是本片的瓶）。止：传送带匀速左移，每张卡下面列出各自的真实字段。',
+ ai:'第一张卡沿用瓶身；没有本地封面的模板用字段卡代替，并明确标注。',
+ refs:[[3,'横向卡片传送带，光标滑过 → 模板字段卡传送带']]},
+{n:'07',a:34,b:40,snap:[35.0,38.95],title:'新建作品｜三种做法',st:'v',stl:'入口可见',
+ func:'新建作品：对话成片、无限画布、视频剪辑（测试版）；另有更多编辑器 5 个（测试版）。',path:'侧栏 新建作品 → 选择编辑器弹窗',
+ change:'起：已登录的模板库从右侧推入，光标点“新建作品”，切到真实弹窗。止：依次框出对话成片、视频剪辑（测试版）和“更多编辑器(5)”，最后框住无限画布并点击，镜头冲进卡片。',
+ ai:'无。',
+ refs:[[7,'真实软件界面加说明标签 → 三个模式的标注']]},
+{n:'08',a:40,b:46,snap:[41.3,44.6],title:'无限画布｜文字 → 图片 → 视频',st:'p',stl:'入口可见＋示意链路',
+ func:'5 类生成入口、从网盘导入、助手建议“搭建生成链路（文案→图片→视频）”。',path:'无限画布 → 助手面板 · 搭建生成链路',
+ change:'起：点阵画布上出现两块真实界面局部（助手建议、生成入口），光标点“搭建生成链路”。止：文案卡 → 连线 → 瓶身图片卡 → 连线 → 视频卡依次长出，视频卡放大推满全屏。',
+ ai:'图片卡和视频卡用的都是同一只瓶；链路本身是示意，没有测试实际生成。',
+ refs:[[15,'节点和连线逐个点亮 → 生成链路'],[13,'一句话变成动画 → 文案卡驱动后续节点']]},
+{n:'09',a:46,b:52,snap:[46.6,50.6],title:'日本本土化｜日本的香，日本的话',st:'n',stl:'创意层',
+ func:'不是产品功能：用日语原料词、日文排版和日本办公情景，表现本土化表达。',path:'—（后期）',
+ change:'起：视频卡的满屏画面和企划室显示器里的画面对位（反向推镜）。止：拉出整个企划室，左下角落下日文标题，桌上的瓶旁出现原料标签。',
+ ai:'企划室关键帧从显示器特写拉到全景。屏幕里的界面也是 AI 生成的，正式片要贴入真实输出和真实界面。',
+ refs:[[21,'界面从显示器里浮出，日本办公情景 → 显示器对位拉出'],[26,'日文字幕直接压在画面上 → 日文排版层']]},
+{n:'10',a:52,b:56.5,snap:[53.3,55.6],title:'宣言再起｜企業の想いを、伝わる映像に。',st:'n',stl:'无功能',
+ func:'把前面的作品收拢成一面模板墙，归到宣言。',path:'—',
+ change:'起：企划室画面缩成墙中央的一格（同一瓶）。止：整面墙拉远、压暗，宣言大字落在中间。',
+ ai:'中央一格是瓶；其余 11 格是官方模板封面，不冒称是客户作品。',
+ refs:[[17,'卡片宇宙拉远 → 模板墙拉远']]},
+{n:'11',a:56.5,b:60,snap:[57.2,59.6],title:'品牌落版｜商業のための、映像制作AI。',st:'v',stl:'正式标志',
+ func:'正式标志、定位语、网址；最后约 2 秒静止。',path:'—',
+ change:'起：墙面压成全黑，标志浮现。止：KAIROS 字标、定位语、kairos.video 依次出现，静止到 1:00。',
+ ai:'无。',
+ refs:[[28,'角标 logo 加一行日文 → 落版的字号层级']]}
+];
+const COV=[
+['模板库 · 三步引导','可见','01-explore.png／02-chrome-explore.png','S02'],
+['分类 Ads 等','可见','01-explore-dom.txt／assets/kairos-ads.jpg','S02'],
+['搜索模板','可见·未操作','01/02 DOM searchbox','S02'],
+['所需素材结构化字段','可见','01/02-explore-dom.txt','S03 S04 S06'],
+['片长·预计积分（部分模板）','可见','01-explore-dom.txt','S03'],
+['用这个模板 → 素材表单','按钮可见·表单未取证','DOM button','S04（示意）'],
+['AI 出片结果','未执行生成','—','S05（示意素材）'],
+['新建作品：对话成片/无限画布/视频剪辑β','可见','03-create-modes.png','S07'],
+['更多编辑器(5) 测试版','可见','04-all-modes.png','S07'],
+['无限画布 5类生成入口·网盘导入·生成链路建议','可见·未操作','05-canvas.png／DOM','S08（链路示意）'],
+['日语配音字幕编辑／风险提示／品牌规范审阅／批量多尺寸输出／修改前后对照／自动分镜','未核验','—','不拍'],
+['URL to Video 等','仅页脚链接文案','01-explore-dom.txt','不拍']];
+
+/* ---------------- engine ---------------- */
+const ease={io:x=>x<.5?4*x*x*x:1-Math.pow(-2*x+2,3)/2,out:x=>1-Math.pow(1-x,3),in:x=>x*x*x,lin:x=>x};
+L.forEach(l=>{let prev={o:1,s:1,r:0};l.keys=l.keys.map(q=>{const n=Object.assign({},prev,q);delete n.e;n.e=q.e||'io';prev=n;return n})});
+const fmt=t=>{const m=Math.floor(t/60),s=(t%60);return m+':'+(s<10?'0':'')+s.toFixed(1)};
+
+function build(host,opts){
+  const st=document.createElement('div');st.className='stage';host.appendChild(st);
+  const els=L.map(l=>{
+    const e=document.createElement('div');e.className='L '+(l.cls||'');
+    if(l.type==='vp'){e.classList.add('vp');const im=new Image();im.src=IMG[l.img];im.alt='';e.appendChild(im);e._im=im;if(l.cap){const c=document.createElement('div');c.className='cap';c.textContent=l.cap;e.appendChild(c)}}
+    else if(l.type==='pic'){e.classList.add('imgc');e.innerHTML='<img alt="" src="'+l.src+'">'+(l.html||'');if(l.cls==='plain'){e.classList.remove('imgc');e.firstChild.style.objectFit='contain'}}
+    else if(l.type==='type'){e.className='L '+l.cls}
+    else if(l.type==='line'){e.innerHTML='<svg width="1600" height="900" viewBox="0 0 1600 900"><path d="'+l.d+'" stroke="#b8cfe6" stroke-width="3" fill="none" pathLength="1" stroke-dasharray="1" stroke-dashoffset="1"/></svg>';e._p=e.querySelector('path')}
+    else{e.className='L '+(l.cls||'');e.innerHTML=l.html||''}
+    e.style.display='none';st.appendChild(e);return e});
+  const subs=document.createElement('div');subs.className='subs';subs.innerHTML='<div class="ja" lang="ja"></div><div class="zh"></div>';st.appendChild(subs);
+  const tb=document.createElement('div');tb.className='tagbar';st.appendChild(tb);
+  const tc=document.createElement('div');tc.className='tc';st.appendChild(tc);
+  const fit=()=>{st.style.transform='scale('+(host.clientWidth/1600)+')'};
+  new ResizeObserver(fit).observe(host);fit();
+  let lastTags='';
+  function render(t){
+    const tags=[];
+    L.forEach((l,i)=>{
+      const e=els[i],ks=l.keys;
+      if(t<ks[0].t||t>ks[ks.length-1].t){if(e.style.display!=='none')e.style.display='none';return}
+      let j=0;while(j<ks.length-1&&ks[j+1].t<=t)j++;
+      let p=ks[j];
+      if(j<ks.length-1){const a=ks[j],b=ks[j+1],u=ease[b.e]((t-a.t)/(b.t-a.t||1));p={};for(const key in b){if(typeof b[key]==='number'&&typeof a[key]==='number')p[key]=a[key]+(b[key]-a[key])*u;else p[key]=b[key]}}
+      e.style.display='';
+      const off=l.off;
+      const tx=off?`translate(${p.x-off[0]}px,${p.y-off[1]}px)`:`translate(${p.x}px,${p.y}px) translate(-50%,-50%)`;
+      e.style.transform=tx+` rotate(${p.r}deg) scale(${p.s})`;
+      if(p.w!=null&&!off)e.style.width=p.w+'px';
+      if(p.h!=null&&!off)e.style.height=p.h+'px';
+      e.style.opacity=p.o;
+      if(l.type==='vp'){const [nw]=SZ[l.img];const kk=p.w/p.zw;e._im.style.width=(nw*kk)+'px';e._im.style.transform=`translate(${p.w/2-p.cx*kk}px,${p.h/2-p.cy*kk}px)`}
+      if(l.type==='type'){const n=Math.round(p.p*l.text.length);if(e._n!==n){e.textContent=l.text.slice(0,n);e._n=n}}
+      if(l.type==='line'){e._p.setAttribute('stroke-dashoffset',1-p.p)}
+      if(l.tag&&p.o>.25)tags.push(l.tag);
+    });
+    const s=SUB.find(q=>t>=q[0]&&t<=q[1]);
+    if(s){subs.style.opacity=1;if(subs._s!==s){subs.children[0].textContent=s[2];subs.children[1].textContent=s[3];subs._s=s}}else subs.style.opacity=0;
+    const seen={},uniq=tags.filter(g=>seen[g.t]?0:(seen[g.t]=1));
+    const key=uniq.map(g=>g.t).join('|');
+    if(key!==lastTags){tb.innerHTML=uniq.map(g=>'<span class="tg '+g.k+'">'+g.t+'</span>').join('');lastTags=key}
+    tc.textContent=fmt(t);
+  }
+  return render;
+}
+
+/* main player */
+const main=build(document.getElementById('mainBox'));
+const scrub=document.getElementById('scrub'),playB=document.getElementById('play'),timeE=document.getElementById('time'),loopE=document.getElementById('loop'),ruler=document.getElementById('ruler'),nowE=document.getElementById('now');
+let T=0,playing=false,last=0,range=null;
+S.forEach((s,i)=>{const b=document.createElement('button');b.style.flex=(s.b-s.a);b.textContent=s.n+' '+s.title.split('｜')[0];b.title=s.title;b.onclick=()=>{seek(s.a+.01);setRange(null)};ruler.appendChild(b)});
+const shotAt=t=>S.find(s=>t>=s.a&&t<s.b)||S[S.length-1];
+let curShot=null;
+function showNow(s){
+  if(curShot===s)return;curShot=s;
+  [...ruler.children].forEach((b,i)=>b.classList.toggle('on',S[i]===s));
+  nowE.innerHTML='<div class="no">'+s.n+'</div><div><h3>'+s.title+'</h3><p class="muted">'+fmt(s.a)+'–'+fmt(s.b)+' · '+s.stl+'</p><p><b>功能</b>　'+s.func+'</p><p><b>UI路径</b>　'+s.path+'</p></div><div><p><b>状态变化</b>　'+s.change+'</p></div>';
+}
+function seek(t){T=Math.max(0,Math.min(60,t));main(T);scrub.value=T;timeE.textContent=fmt(T)+' / 1:00';showNow(shotAt(T))}
+function setRange(r){range=r;loopE.checked=!!r}
+function tick(now){
+  if(!playing)return;
+  const dt=Math.min(.1,(now-last)/1000);last=now;let t=T+dt;
+  if(range&&t>=range[1])t=range[0];
+  if(!range&&loopE.checked){const s=shotAt(T);if(t>=s.b){t=s.a}}
+  if(t>=60){t=60;pause()}
+  seek(t);if(playing)requestAnimationFrame(tick);
+}
+function play(){if(T>=60)T=0;playing=true;playB.textContent='❚❚ 暂停';last=performance.now();requestAnimationFrame(tick)}
+function pause(){playing=false;playB.textContent='▶ 播放'}
+playB.onclick=()=>playing?pause():play();
+scrub.oninput=()=>{seek(+scrub.value)};
+loopE.onchange=()=>{if(!loopE.checked)range=null};
+document.addEventListener('keydown',e=>{if(e.target.tagName==='INPUT'&&e.target.type!=='range')return;if(e.code==='Space'){e.preventDefault();playing?pause():play()}if(e.code==='ArrowRight')seek(T+1);if(e.code==='ArrowLeft')seek(T-1)});
+seek(0);
+
+/* shot cards */
+const list=document.getElementById('shotList');
+S.forEach(s=>{
+  const a=document.createElement('article');a.className='shot';a.id='s'+s.n;
+  const vo=SUB.filter(q=>q[0]>=s.a-.01&&q[0]<s.b);
+  a.innerHTML='<div class="shot-head"><span class="no">'+s.n+'</span><span class="tm">'+fmt(s.a)+' – '+fmt(s.b)+'（'+(s.b-s.a).toFixed(1)+'s）</span><h3>'+s.title+'<span class="st '+s.st+'">'+s.stl+'</span></h3><button class="pv">▶ 预演本镜</button></div>'+
+  '<div class="states"><div class="mini"><div class="mbox"></div><div class="lab"><b>起</b> '+fmt(s.snap[0])+'</div></div><div class="mini"><div class="mbox"></div><div class="lab"><b>止</b> '+fmt(s.snap[1])+'</div></div></div>'+
+  '<div class="cols"><div><h4>实际功能 · UI路径</h4><p>'+s.func+'</p><p><code>'+s.path+'</code></p></div><div><h4>观众看到的状态变化</h4><p>'+s.change+'</p></div><div><h4>AI素材位置与运动</h4><p>'+s.ai+'</p></div></div>'+
+  '<div class="vo"><div><h4 class="eyebrow">日语旁白</h4>'+(vo.length?vo.map(q=>'<p class="ja" lang="ja">'+q[2]+' <span class="muted">'+fmt(q[0])+'–'+fmt(q[1])+'</span></p>').join(''):'<p class="muted">（无旁白，留给画面和音乐）</p>')+'</div><div><h4 class="eyebrow">中文</h4>'+(vo.length?vo.map(q=>'<p class="zh">'+q[3]+'</p>').join(''):'<p class="muted">—</p>')+'</div></div>'+
+  '<div class="refs">'+s.refs.map(r=>{const f=RF[r[0]],nn=String(r[0]).padStart(2,'0');return '<a class="ref" href="references-28.html#ref-'+nn+'"><img loading="lazy" src="references-28/frames/'+f[0]+'-2.jpg" alt="R'+nn+' 取样帧"><div><b>R'+nn+' · '+f[1]+' · '+f[2]+'</b><span>取样 '+fmt(f[3])+'（'+f[3]+'s）</span><span>'+r[1]+'</span></div></a>'}).join('')+'</div>';
+  list.appendChild(a);
+  const boxes=a.querySelectorAll('.mbox');
+  s.snap.forEach((t,i)=>{const r=build(boxes[i]);requestAnimationFrame(()=>r(t))});
+  a.querySelector('.pv').onclick=()=>{setRange([s.a,s.b]);seek(s.a);play();window.scrollTo({top:document.getElementById('preview').getBoundingClientRect().top+window.scrollY-24,behavior:'smooth'})};
+});
+
+/* coverage table */
+document.getElementById('covTable').innerHTML='<tr><th>功能</th><th>核验程度</th><th>证据</th><th>镜号</th></tr>'+COV.map(c=>'<tr><td>'+c[0]+'</td><td>'+c[1]+'</td><td><code>'+c[2]+'</code></td><td>'+c[3]+'</td></tr>').join('');
+})();
+</script>
+</body>
+</html>
