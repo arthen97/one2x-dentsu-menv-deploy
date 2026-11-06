@@ -15,8 +15,10 @@ Menv 配置为 build.shape=static、build.root=.、build.output=dist。使用Nod
 
 基础版本有323文件，含45个视频、192张图片、2个字体。原媒体继续完整保存在公开源码仓库中。
 
-当前 KAIROS 脚本更新位于 overlay/，overlay-manifest.json 逐文件声明路径、大小和 SHA256。构建先还原基础版本，再校验并应用更新，保留所有未修改文件；最后重新校验全部输出，写入 dist/release-manifest.json。当前共329个内容文件，另有发布清单，含45个视频、193张图片和2个字体。新增图片为当前v6预演画面，原45视频及192图片原字节不变。
+当前 KAIROS 更新位于 overlay/，overlay-manifest.json 逐文件声明路径、大小和 SHA256。构建先还原基础版本，再校验并应用更新，保留所有未修改文件；最后重新校验全部输出，写入 dist/release-manifest.json。当前共330个内容文件，另有发布清单，含46个视频、193张图片和2个字体。新增内容包括当前v6预演画面和24.50MB网页预演视频；原45视频及192图片原字节不变。
 
-当前脚本依据 ae-native-v6/index.html 及实际AE总合成排时：60秒、7个主叙事段，保留日语与中文原文。主页入口更新，旧KAIROS页与references-28.html原路径及锚点保留并提示当前稿。影片MP4及AE工程不作为本次脚本更新附件新增。
+当前脚本依据 ae-native-v6/index.html 及实际AE总合成排时：60秒、7个主叙事段，保留日语与中文原文。当前脚本页已加入v6原片生成的1080p/30fps完整60秒播放器、逐段播放及MP4下载；H.264网页压缩后保留原AAC音轨字节，faststart便于边下载边播放。原MP4来源SHA256为105689f8350696ae0e3fcec7cebab0c00935414924bc71348831f2ae175f695e，网页MP4 SHA256为185370a6004955bc387db6d29c0c637b0fd8ad656023ad852703d5cac3c189ca。AE工程不作为网页附件。
+
+主页入口更新，旧KAIROS页与references-28.html原路径及锚点保留，并指向当前预演和脚本。
 
 dist、临时源码、node_modules均不提交Git。仍部署到同一个Menv应用和原域名，不新建站点。
