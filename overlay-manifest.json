@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "update": "KAIROS: show timeline editing in the 27–35 second slot",
+  "update": "KAIROS: specify the Shiseido vertical-to-CM cut",
   "assets": [
     {
       "path": "index.html",
@@ -60,32 +60,32 @@
     },
     {
       "path": "materials/Claude交接-2026-11-04/视觉提案-v2/KAIROS-当前脚本.html",
-      "size": 70686,
-      "sha256": "376af51bdc40c81327d51687a81158be77d250763ed60b5b38b38cf9bc814869",
+      "size": 71488,
+      "sha256": "8b67d79ebc7803c59be29c27ca083fa27fdb1f5df14faf21fa1e62aa75771dc8",
       "mime": "text/html",
       "type": "html",
       "storage": "file"
     },
     {
       "path": "materials/Claude交接-2026-11-04/视觉提案-v2/KAIROS-当前脚本.json",
-      "size": 40781,
-      "sha256": "5b899810eee7c0717b81e57330d641476b4553949959ff6bb22dc8c40e05bc14",
+      "size": 41446,
+      "sha256": "32008fd30b4267c5cf501e9ded5a7c18fa7aad19b8d684dd63f19502de00e4a6",
       "mime": "application/json",
       "type": "document",
       "storage": "file"
     },
     {
       "path": "materials/Claude交接-2026-11-04/视觉提案-v2/KAIROS-当前脚本.md",
-      "size": 26910,
-      "sha256": "44f992b5ecd45ff154b3a66945b1213df5fc95bed7d7f8c5158ba079f14b1bbc",
+      "size": 27631,
+      "sha256": "82eac11dd2aa2518125e1dbe623f89cfc3d78f9260fdf08c7ea58e6e7dc22584",
       "mime": "text/markdown",
       "type": "document",
       "storage": "file"
     },
     {
       "path": "materials/Claude交接-2026-11-04/视觉提案-v2/KAIROS-当前脚本.txt",
-      "size": 27013,
-      "sha256": "e827af3cbe745603afbf4fc19a4042e157b83f06cbfecd2793febd24ab63d458",
+      "size": 27738,
+      "sha256": "b28db7fc86bc4dbc71bb1f024f4e820f1bedad23b917439224b8d0b1c03f4d0c",
       "mime": "text/plain",
       "type": "document",
       "storage": "file"
