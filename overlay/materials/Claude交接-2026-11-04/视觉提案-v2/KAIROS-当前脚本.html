@@ -11,12 +11,23 @@
 #v11-script .contents{margin-top:14px}#v11-script .segment{padding:24px 0}
 @media(max-width:700px){.industry-grid{grid-template-columns:1fr}#script .segment-head h3{font-size:25px}.voice-key,.voice-pair{grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:12px;padding:10px}.voice-pair p{overflow-wrap:anywhere}}
 @media print{.beat-index,#preview,#v11-script{display:none}}
+
+.beat-breakdown{margin-top:24px}
+.beat-breakdown h4{font-size:16px;margin:0 0 8px}
+.shot-list{list-style:none;margin:0 0 14px;padding:0}
+.shot-list li,.beat-facts>div{display:grid;grid-template-columns:minmax(105px,144px) minmax(0,1fr);gap:12px;border-top:1px solid #e7e7e7;padding:9px 0}
+.shot-time,.beat-facts dt{color:#535353;font-size:14px;font-weight:600;font-variant-numeric:tabular-nums}
+.beat-facts{margin:0}.beat-facts dd{margin:0}.beat-facts .beat-result{padding:10px 12px;background:#f6f6f6;border-radius:5px;border:0}
+.beat-evidence{font-size:14px;color:#535353;margin:10px 0 0;max-width:970px}
+.industry-result strong{color:#353535}
+@media(max-width:700px){.shot-list li,.beat-facts>div{grid-template-columns:1fr;gap:2px}.beat-breakdown{font-size:16px}}
+@media print{#script .segment{break-inside:auto}#script .segment-head,#script .voice,.shot-list li,.beat-facts>div{break-inside:avoid}}
 </style></head><body><header id="one2x-material-nav"><a class="one2x-brand" href="../../../index.html#concept"><img src="../../../assets/one2x-wordmark.svg" alt="One2X"><span class="one2x-material-label">KAIROS / 发布会主题片脚本</span></a><a class="one2x-back" href="../../../index.html#concept">返回制作报告</a></header><main>
 
 <p class="eyebrow">KAIROS / 电通大会</p>
 <h1>KAIROS 发布会主题片脚本</h1>
-<p class="lead">面向日本市场 B2B 发布会。用日语大字讲清主张，再用对应的产品界面或生成成片佐证。具体镜头与产品界面供制作拆解时参考。</p>
-<div class="meta"><span>11 月 6 日会议修订</span><span>约 60 秒 · 16:9</span><span>日语旁白 · 日英字幕</span><span>12 行业快闪</span></div>
+<p class="lead">面向日本市场 B2B 发布会。用日语大字讲清主张，再用对应的产品界面或生成成片佐证。下方逐段标出大字、镜头、界面操作和可见结果。</p>
+<div class="meta"><span>11 月 6 日会议修订</span><span>约 60 秒 · 16:9</span><span>日语旁白 · 日英字幕</span><span>12 行业快闪</span><span>画面与 UI 拆解</span></div>
 <div class="downloads">
   <a href="KAIROS-当前脚本.txt" download>下载新版脚本 TXT</a>
   <a href="KAIROS-当前脚本.md" download>下载 Markdown</a>
@@ -24,20 +35,22 @@
   <button type="button" onclick="window.print()">打印 / 存 PDF</button>
 </div>
 <nav class="contents" aria-label="当前脚本目录">
-  <a href="#script">分段脚本</a>
+  <a href="#script">分段执行拆解</a>
   <a href="#industries">12 行业快闪</a>
   <a href="#voiceover">日语旁白与英文字幕</a>
   <a href="#notes">制作备注</a>
   <a href="#preview">v11 前序预演</a>
 </nav>
 <section id="script" class="script-section" aria-labelledby="script-heading">
-  <h2 id="script-heading">当前脚本</h2>
+  <h2 id="script-heading">当前脚本 · 逐段执行拆解</h2>
   <p class="script-sequence">产品定位 → 本地化 → 真实质感与日系审美 → 合规支持 → 制作成本与产出 → 多行业适用</p>
-  <p>以下按 60 秒安排；制作时可根据字幕阅读、实际样片和音乐节拍微调。大字与佐证画面可以前后衔接，也可以短暂叠合，但应保证观众先读懂优势，再看清对应结果。</p>
+  <p>下方时间是建议剪点。大字先留出阅读空间，操作只保留能解释前后变化的关键一拍。录屏与成片须能追溯到对应任务；跳过制作等待时用明确剪切。</p>
   <nav class="beat-index" aria-label="分段跳转">
-    <a href="#beat-01">00:00 产品定位</a><a href="#beat-02">00:04 本地化</a>
-    <a href="#beat-05">00:15 生成效果</a><a href="#beat-07">00:27 合规支持</a>
-    <a href="#beat-08">00:35 成本与产出</a><a href="#beat-10">00:45 多行业适用</a>
+    <a href="#beat-01">00:00 产品定位</a><a href="#beat-02">00:04 日语理解</a>
+    <a href="#beat-03">00:08 工作流程</a><a href="#beat-04">00:11 企业用途</a>
+    <a href="#beat-05">00:15 真实质感</a><a href="#beat-06">00:21 日系审美</a>
+    <a href="#beat-07">00:27 合规支持</a><a href="#beat-08">00:35 多版产出</a>
+    <a href="#beat-09">00:40 广告样片</a><a href="#beat-10">00:45 多行业适用</a>
     <a href="#beat-11">00:57 品牌收尾</a>
   </nav>
   <details class="script-details"><summary>创意方向与核心文案</summary>
@@ -78,57 +91,196 @@
   <article class="segment" id="beat-01">
   <div class="segment-head"><span class="letter">01</span><div><div class="time">00:00–00:04</div><h3>产品定位</h3></div></div>
   <div class="voice"><div><div class="label">日语上屏</div><p class="ja" lang="ja">KAIROS → 日本初。商業のための、映像制作AI。</p></div><div><div class="label">中文对照</div><p class="zh">KAIROS → 日本首个，为商业而生的视频制作 AI。</p></div></div>
-  <div class="visual"><h4>画面与剪辑参考</h4><p>先出“日本初。”，随即接“商業のための、映像制作AI。”与 KAIROS 品牌，结合简洁的产品界面或成片画面，不另设缓慢的氛围序章。</p></div>
+  <div class="beat-breakdown">
+    <h4>画面与剪辑节拍</h4>
+    <ol class="shot-list">
+    <li><span class="shot-time">00:00.0–00:00.8</span><span>同一浅色品牌底上只出现「日本初。」。首创口径确认后才使用这拍。</span></li>
+    <li><span class="shot-time">00:00.8–00:02.8</span><span>原位置补出「商業のための、映像制作AI。」和官方 KAIROS Logo，定位和标志一起稳定留屏。</span></li>
+    <li><span class="shot-time">00:02.8–00:04.0</span><span>沿同一轴线切入真实工作台一角，中央露出洗衣机项目的预览画面，右侧留出下一段的助手输入位置。</span></li>
+    </ol>
+    <dl class="beat-facts">
+      <div><dt>产品操作</dt><dd>只取实际项目的预览和输入区建立产品语境。开场没有操作。</dd></div>
+      <div class="beat-result"><dt>观众看到的结果</dt><dd>观众读完品牌和商业视频制作定位，接着看到同一案例的工作台。</dd></div>
+    </dl>
+    <p class="beat-evidence"><strong>素材与核验</strong> 官方 Logo 可沿用。首创口径仍待确认；若未确认，片头和片尾均从商业定位起，旁白与英文字幕一起对齐。</p>
+
+  </div>
 </article>
 <article class="segment" id="beat-02">
   <div class="segment-head"><span class="letter">02</span><div><div class="time">00:04–00:08</div><h3>日语理解</h3></div></div>
   <div class="voice"><div><div class="label">日语上屏</div><p class="ja" lang="ja">日本語で、意図が伝わる。</p></div><div><div class="label">中文对照</div><p class="zh">用日语，准确表达需求。</p></div></div>
-  <div class="visual"><h4>画面与剪辑参考</h4><p>先出大字，再展示一句自然的日语制作需求，以及准确对应的生成结果。以可读的关键交互体现理解力，不逐步演示完整操作。</p></div>
+  <div class="beat-breakdown">
+    <h4>画面与剪辑节拍</h4>
+    <ol class="shot-list">
+    <li><span class="shot-time">00:04.0–00:05.2</span><span>工作台停在助手区和中央预览的双区构图。「日本語で、意図が伝わる。」先清楚上屏，随后留在画面上方。</span></li>
+    <li><span class="shot-time">00:05.2–00:06.6</span><span>裁近右侧助手，显示已输入的日语短句「扉を開いて、白いシャツを取り出す。」；光标点一次真实发送图标。</span></li>
+    <li><span class="shot-time">00:06.6–00:08.0</span><span>硬切到同一任务完成后的中央预览，再放大成片。从手已搭在门上的一帧起切，让门打开，接同一只手从滚筒向外抽出白衬衫。</span></li>
+    </ol>
+    <dl class="beat-facts">
+      <div><dt>产品操作</dt><dd>预先准备商品参考图。对话工作台右侧输入日语并发送。待任务完成后在同一项目中央预览播放该片段，录下输入和结果两端。按实机显示取按钮和状态文字。</dd></div>
+      <div class="beat-result"><dt>观众看到的结果</dt><dd>一句日语里的「开门」和「白衬衫」都能在结果中对上。发送和成片之间的剪切省略实际制作等待。</dd></div>
+    </dl>
+    <p class="beat-evidence"><strong>素材与核验</strong> 对话工作台结构已有实机记录。这句输入及其对应的成功结果须成对补录。 <a href="#segment-06">看 v11 对话工作台结构</a></p>
+
+  </div>
 </article>
 <article class="segment" id="beat-03">
   <div class="segment-head"><span class="letter">03</span><div><div class="time">00:08–00:11</div><h3>日本工作流程</h3></div></div>
   <div class="voice"><div><div class="label">日语上屏</div><p class="ja" lang="ja">日本の仕事の流れに、フィット。</p></div><div><div class="label">中文对照</div><p class="zh">适配日本工作流程。</p></div></div>
-  <div class="visual"><h4>画面与剪辑参考</h4><p>选一个实际产品中能体现工作习惯适配的界面或交互，快速展示。只保留能说明优势的环节。</p></div>
+  <div class="beat-breakdown">
+    <h4>画面与剪辑节拍</h4>
+    <ol class="shot-list">
+    <li><span class="shot-time">00:08.0–00:09.2</span><span>沿用洗衣机画面做转场。大字「日本の仕事の流れに、フィット。」上屏时切到另一路模板项目的表单局部。</span></li>
+    <li><span class="shot-time">00:09.2–00:10.2</span><span>只框第一件商品的三处：洗衣机图缩略、日语品类「洗濯機」和预填动作「扉を開いて、白いシャツを取り出す。」。</span></li>
+    <li><span class="shot-time">00:10.2–00:11.0</span><span>鼠标离开最后一个已填字段。以实际表单状态切到已就绪的制作入口，保留缩略图和动作文字作画面锚点。</span></li>
+    </ol>
+    <dl class="beat-facts">
+      <div><dt>产品操作</dt><dd>从模板库预先打开 Home Appliance Showcase，在相应的商品图、品类、动作字段填入内容。其余必填项在录制前完成。拍一处字段编辑和提交前的可见状态，本段停在制作入口。</dd></div>
+      <div class="beat-result"><dt>观众看到的结果</dt><dd>观众看到商品图、日语品类和动作要求已经归到固定位置，可以交给制作。</dd></div>
+    </dl>
+    <p class="beat-evidence"><strong>素材与核验</strong> 家电模板和日语填写已有实机记录。原界面三项为 Upload product 1 image、Input product 1 category、Input product 1 interaction beat。三项是画面裁切范围，提交条件按完整实机表单。 <a href="#segment-08">看 v11 模板字段结构</a></p>
+
+  </div>
 </article>
 <article class="segment" id="beat-04">
   <div class="segment-head"><span class="letter">04</span><div><div class="time">00:11–00:15</div><h3>日本企业的视频制作</h3></div></div>
   <div class="voice"><div><div class="label">日语上屏</div><p class="ja" lang="ja">日本企業の動画づくりに。</p></div><div><div class="label">中文对照</div><p class="zh">服务日本企业的视频制作。</p></div></div>
-  <div class="visual"><h4>画面与剪辑参考</h4><p>通过实际界面与代表性成片，快速展示社交宣传、商品介绍或企业说明等常用视频类型，带出对日本企业制作需求的适配。</p></div>
+  <div class="beat-breakdown">
+    <h4>画面与剪辑节拍</h4>
+    <ol class="shot-list">
+    <li><span class="shot-time">00:11.0–00:12.3</span><span>「日本企業の動画づくりに。」放在模板预览上方。保留 Home Appliance Showcase 卡片和可辨认的商品画面。</span></li>
+    <li><span class="shot-time">00:12.3–00:13.4</span><span>点开实际模板的已有预览，切到家电商品介绍样片。取模板源片约 00:05.7–00:06.8 的开门动作，裁到洗衣机和操作者都清楚可辨。</span></li>
+    <li><span class="shot-time">00:13.4–00:15.0</span><span>商品样片停在中央，两边切入不同来源的短片：左侧店员掀开门帘，右侧企业说明图解展开第一步。用「店舗PR」「商品紹介」「企業紹介」做片中标签。</span></li>
+    </ol>
+    <dl class="beat-facts">
+      <div><dt>产品操作</dt><dd>模板库只录一次可核对的预览动作。三联画由后期编排，片中标签与实机界面分开。</dd></div>
+      <div class="beat-result"><dt>观众看到的结果</dt><dd>观众看到门店宣传、商品介绍、企业说明三个明确用法；中央是模板已有的样片，两侧是独立案例。</dd></div>
+    </dl>
+    <p class="beat-evidence"><strong>素材与核验</strong> 已有家电官方模板样片可参考。补门店与企业说明可用样片，并核对正式录制时的预览入口。</p>
+
+  </div>
 </article>
 <article class="segment" id="beat-05">
   <div class="segment-head"><span class="letter">05</span><div><div class="time">00:15–00:21</div><h3>真实质感</h3></div></div>
   <div class="voice"><div><div class="label">日语上屏</div><p class="ja" lang="ja">実写のような質感。</p></div><div><div class="label">中文对照</div><p class="zh">真实质感。</p></div></div>
-  <div class="visual"><h4>画面与剪辑参考</h4><p>以人物近景展示皮肤纹理、眼周细节、发丝与面部受光；接一个眨眼、视线转向或转头的连续动作，让观众看清五官、肌肤与发丝随动作变化的连贯性。使用实际生成片段，突出弱 AI 感。</p></div>
+  <div class="beat-breakdown">
+    <h4>画面与剪辑节拍</h4>
+    <ol class="shot-list">
+    <li><span class="shot-time">00:15.0–00:16.5</span><span>人物处在窗边的中近景，目光朝下。「実写のような質感。」放在人物视线侧的留白。</span></li>
+    <li><span class="shot-time">00:16.5–00:21.0</span><span>接同一人的连续近景。她抬眼望向窗边、自然眨眼一次，再轻转头停住。侧光跟着脸的角度改变，保持眼周、皮肤和几根散发可见。</span></li>
+    </ol>
+    <dl class="beat-facts">
+      <div><dt>产品操作</dt><dd>本段直接放同一条 KAIROS 人像输出。制作端从原文件截连续动作，保留原速和纹理。</dd></div>
+      <div class="beat-result"><dt>观众看到的结果</dt><dd>观众有足够时间看清眼睑、视线、肤质与发丝在一次完整动作中的连续性。</dd></div>
+    </dl>
+    <p class="beat-evidence"><strong>素材与核验</strong> 待回收可追溯的实际生成片段，逐帧检查五官与发丝。日系广告素材只用于参考构图和光线。</p>
+
+  </div>
 </article>
 <article class="segment" id="beat-06">
   <div class="segment-head"><span class="letter">06</span><div><div class="time">00:21–00:27</div><h3>日系审美</h3></div></div>
   <div class="voice"><div><div class="label">日语上屏</div><p class="ja" lang="ja">日本らしい美しさ。</p></div><div><div class="label">中文对照</div><p class="zh">日系审美。</p></div></div>
-  <div class="visual"><h4>画面与剪辑参考</h4><p>延续人物主体，接入日系广告风格的居家或通勤人像：展示日常妆发、服饰和环境，用柔和光线、肤色与构图呈现日本本土人像广告的观感。保留可辨识的人物动作，不切换为商品特写。</p></div>
+  <div class="beat-breakdown">
+    <h4>画面与剪辑节拍</h4>
+    <ol class="shot-list">
+    <li><span class="shot-time">00:21.0–00:22.5</span><span>顺着上一镜转头方向切到同一人物的玄关中景。「日本らしい美しさ。」放在窗光照到的空墙一侧。</span></li>
+    <li><span class="shot-time">00:22.5–00:27.0</span><span>浅色开衫、日常妆发和木质玄关留在一镜里。她拿起布包，停一拍再出门。镜头保持稳定，让柔和窗光和人物动作完成这一段。</span></li>
+    </ol>
+    <dl class="beat-facts">
+      <div><dt>产品操作</dt><dd>本段只展示实际生成的人像成片。制作时对照上一镜的人物、服装和窗光方向，先匹配再剪。</dd></div>
+      <div class="beat-result"><dt>观众看到的结果</dt><dd>观众看到自然生活场景中的日系人像：肤色柔和、画面留白、动作连续。</dd></div>
+    </dl>
+    <p class="beat-evidence"><strong>素材与核验</strong> 待回收玄关段的生成片源。优先找同一人物案例；人物一致性无法维持时，选单独完整的人像成片。</p>
+
+  </div>
 </article>
 <article class="segment" id="beat-07">
   <div class="segment-head"><span class="letter">07</span><div><div class="time">00:27–00:35</div><h3>合规支持</h3></div></div>
   <div class="voice"><div><div class="label">日语上屏</div><p class="ja" lang="ja">表現リスクを、事前にチェック。</p></div><div><div class="label">中文对照</div><p class="zh">提前检查表达风险。</p></div></div>
-  <div class="visual"><h4>画面与剪辑参考</h4><p>用界面或动效呈现“风险提示 → 修正建议 → 内容调整”。提示内容与产品实际支持范围一致；不呈现“零违规”或“审核必过”的结论。</p></div>
+  <div class="beat-breakdown">
+    <h4>画面与剪辑节拍</h4>
+    <ol class="shot-list">
+    <li><span class="shot-time">00:27.0–00:28.5</span><span>「表現リスクを、事前にチェック。」放在草稿预览上方。另切咖啡广告草稿和助手区，作为一般食品的独立案例。</span></li>
+    <li><span class="shot-time">00:28.5–00:30.0</span><span>先让观众读到咖啡草稿「飲めば必ず疲れが取れる。」。若有新录屏，同屏露出已开启的检查状态和品类。</span></li>
+    <li><span class="shot-time">00:30.0–00:32.5</span><span>高亮「必ず」，接实机提示和建议。若实际结果未回收，用独立于产品界面的「表現の確認例」说明卡示意「『必ず』のような断定表現を見直す」。</span></li>
+    <li><span class="shot-time">00:32.5–00:35.0</span><span>制作人员改同一条字幕并预览，画面停在「朝に、香りを楽しむ一杯。」。前后保持同一视频画面和字幕位置。</span></li>
+    </ol>
+    <dl class="beat-facts">
+      <div><dt>产品操作</dt><dd>在一般食品广告的对话工作台，先核对聊天框旁的广告表达检查状态和品类，再按实机流程提交草稿。收到明确的提示和建议后，由制作人员改同一条字幕并预览。正式录制前先复核状态入口和触发方式。暂缺返回结果时，先剪说明卡与人工修改前后对照。</dd></div>
+      <div class="beat-result"><dt>观众看到的结果</dt><dd>观众看到哪个词需要复核、建议改什么、修改后的成片字幕是什么。</dd></div>
+    </dl>
+    <p class="beat-evidence"><strong>素材与核验</strong> 历史食品广告项目记录了「广告表达检查」已打开，品类为「一般食品」。触发规则、风险返回、建议及修改闭环仍待补录。若采用流程示意，片中保留示意标识，播出口径需同步确认。</p>
+
+  </div>
 </article>
 <article class="segment" id="beat-08">
   <div class="segment-head"><span class="letter">08</span><div><div class="time">00:35–00:40</div><h3>制作成本与产出</h3></div></div>
   <div class="voice"><div><div class="label">日语上屏</div><p class="ja" lang="ja">もっと多くの動画を、低コストで。</p></div><div><div class="label">中文对照</div><p class="zh">以更低成本，制作更多视频。</p></div></div>
-  <div class="visual"><h4>画面与剪辑参考</h4><p>多支社交视频、多尺寸画面或同一素材的多个版本快速展开，强调低成本与多产出。用成片结果说话，不放虚构的价格对比。</p></div>
+  <div class="beat-breakdown">
+    <h4>画面与剪辑节拍</h4>
+    <ol class="shot-list">
+    <li><span class="shot-time">00:35.0–00:36.3</span><span>同一洗衣机的主素材居中，「もっと多くの動画を、低コストで。」在上方完整显示。</span></li>
+    <li><span class="shot-time">00:36.3–00:38.8</span><span>画面排开真实文件的 9:16、1:1、16:9 三种版式。竖版先看到手抽出衬衫，方版首帧是门圈与商品，横版留出整个空间。画幅数字是片中标签。</span></li>
+    <li><span class="shot-time">00:38.8–00:40.0</span><span>放大竖版，并让抽衬衫动作接到下一段。其余两个版本留出短暂识别时间。</span></li>
+    </ol>
+    <dl class="beat-facts">
+      <div><dt>产品操作</dt><dd>制作端按实际支持方式分开制作各版本。已见过普通导出入口，拍摄时核对可选规格。片中直接用导出的文件做后期三分屏。</dd></div>
+      <div class="beat-result"><dt>观众看到的结果</dt><dd>观众看见同一组素材产出三种构图和开场不同的版本。</dd></div>
+    </dl>
+    <p class="beat-evidence"><strong>素材与核验</strong> 三种画幅是目标，以实际文件为准。低成本口径另需业务依据。主片画面不展示未经核验的自动改尺寸或一键批量流程。</p>
+
+  </div>
 </article>
 <article class="segment" id="beat-09">
   <div class="segment-head"><span class="letter">09</span><div><div class="time">00:40–00:45</div><h3>从社交视频到广告</h3></div></div>
   <div class="voice"><div><div class="label">日语上屏</div><p class="ja" lang="ja">SNS動画から、高品質なCM制作まで。</p></div><div><div class="label">中文对照</div><p class="zh">从社交视频，到高品质广告制作。</p></div></div>
-  <div class="visual"><h4>画面与剪辑参考</h4><p>从多版本社交视频切入一个有冲击力的高品质广告成片镜头，清楚展示可覆盖的制作范围。</p></div>
+  <div class="beat-breakdown">
+    <h4>画面与剪辑节拍</h4>
+    <ol class="shot-list">
+    <li><span class="shot-time">00:40.0–00:41.5</span><span>沿用上一段放大的 9:16，完整展示「SNS動画から、高品質なCM制作まで。」。手和白衬衫在画面中部开始移动。</span></li>
+    <li><span class="shot-time">00:41.5–00:45.0</span><span>用同一个门圈的位置和抽衣方向切到 16:9 广告成片。横版镜头让白衬衫从滚筒拉出，侧光扫过布纹和金属门沿，完整保留动作直到画面稳定。</span></li>
+    </ol>
+    <dl class="beat-facts">
+      <div><dt>产品操作</dt><dd>不切回软件。以同商品的社交版与广告版实际输出做同物对剪，先对齐主体位置、手的方向和动作阶段。</dd></div>
+      <div class="beat-result"><dt>观众看到的结果</dt><dd>观众先看到手机社交片，再看到横版 CM 的空间、布纹、光线和连续动作，能识别出两种成片的差别。</dd></div>
+    </dl>
+    <p class="beat-evidence"><strong>素材与核验</strong> 待确认一对可配剪的真实输出。若同素材尚无横版 CM，先将该镜列为制作缺口，外部广告保留为风格参考。</p>
+
+  </div>
 </article>
 <article class="segment" id="beat-10">
   <div class="segment-head"><span class="letter">10</span><div><div class="time">00:45–00:57</div><h3>多行业适用</h3></div></div>
   <div class="voice"><div><div class="label">日语上屏</div><p class="ja" lang="ja">あらゆる業界の、動画制作に。</p></div><div><div class="label">中文对照</div><p class="zh">各行各业的视频制作，都适用。</p></div></div>
-  <div class="visual"><h4>画面与剪辑参考</h4><p>以 12 个行业与用途的成片镜头快闪，平均每镜约 1 秒；每镜配一个简短日文行业词。前四镜用资生堂红腰子、大丸百货、牛角烧肉和丰田形成具体记忆点，再扩展到其他行业与企业用途。具体安排见下表。</p><p><a href="#industries">查看 12 个行业与用途 ↓</a></p></div>
+  <div class="beat-breakdown">
+    <h4>画面与剪辑节拍</h4>
+    <ol class="shot-list">
+    <li><span class="shot-time">00:45.0–00:47.0</span><span>「あらゆる業界の、動画制作に。」固定在上方留白，跨美妆、零售两镜留满 2 秒。每镜对应的短行业词在左下角随画面更换。</span></li>
+    <li><span class="shot-time">00:47.0–00:57.0</span><span>主张退场。后十镜按每秒一切满幅播放，短行业词位置固定，每条从关键动作已开始的位置起切。最后一镜给品牌底板留出交接位置。</span></li>
+    </ol>
+    <dl class="beat-facts">
+      <div><dt>产品操作</dt><dd>用已确认的 12 个独立成片片段剪辑，行业标签由后期统一叠加。行业主张在段首只读一次，后续按音乐节拍推进。</dd></div>
+      <div class="beat-result"><dt>观众看到的结果</dt><dd>观众能从每秒的主体和动作读出用途差异，品牌参考仅在对应画面里出现。</dd></div>
+    </dl>
+    <p class="beat-evidence"><strong>素材与核验</strong> 按下方逐镜表回收素材。前四个品牌按确认的参考或替代素材处理，样片来源与案例身份分开记录。</p>
+    <p><a href="#industries">查看 12 个行业逐镜拆解 ↓</a></p>
+  </div>
 </article>
 <article class="segment" id="beat-11">
   <div class="segment-head"><span class="letter">11</span><div><div class="time">00:57–01:00</div><h3>品牌收尾</h3></div></div>
   <div class="voice"><div><div class="label">日语上屏</div><p class="ja" lang="ja">日本初。商業のための、映像制作AI。 → Logo</p></div><div><div class="label">中文对照</div><p class="zh">日本首个，为商业而生的视频制作 AI。 → Logo</p></div></div>
-  <div class="visual"><h4>画面与剪辑参考</h4><p>回到开场定位，以品牌和同一句主张定格；旁白仅读“KAIROS”，将最后 3 秒留给定位文案与 Logo 的阅读、识别。</p></div>
+  <div class="beat-breakdown">
+    <h4>画面与剪辑节拍</h4>
+    <ol class="shot-list">
+    <li><span class="shot-time">00:57.0–00:57.7</span><span>招聘镜头右侧的浅色留白接到品牌底板，官方 Logo 与定位文案一起落定。</span></li>
+    <li><span class="shot-time">00:57.7–01:00.0</span><span>同一构图静止，旁白只读「KAIROS」。保留 2.3 秒供观众读定位与识别 Logo。</span></li>
+    </ol>
+    <dl class="beat-facts">
+      <div><dt>产品操作</dt><dd>本段为品牌标版。使用官方 Logo 与片头同一套定位排版。</dd></div>
+      <div class="beat-result"><dt>观众看到的结果</dt><dd>最后一帧只留下品牌和商业视频制作定位。</dd></div>
+    </dl>
+    <p class="beat-evidence"><strong>素材与核验</strong> 和片头共享同一套「日本初」确认口径。</p>
+
+  </div>
 </article>
 </section>
 <section id="industries" class="notes" aria-labelledby="industry-heading">
@@ -139,73 +291,85 @@
   <span class="time">00:45–00:46 · 01</span>
   <h3>美妆：资生堂红腰子</h3>
   <p class="industry-ja" lang="ja">化粧品・美容</p>
-  <p>以资生堂红腰子精华为具体产品，展示人物手持红色瓶身的人像广告镜头，兼顾包装辨识度、肌肤细节与日系审美。</p>
+  <p>半身近景。模特把红瓶抬到颊侧，瓶身正面从入镜起就朝观众。</p>
+  <p class="industry-result"><strong>结果</strong> 红瓶轮廓和人物肤质同框，观众一眼读出美妆人像广告。</p>
 </li>
 <li class="industry">
   <span class="time">00:46–00:47 · 02</span>
   <h3>零售：大丸百货</h3>
   <p class="industry-ja" lang="ja">小売</p>
-  <p>以大丸百货为具体店铺，展示可辨认店名的入口、橱窗或购物场景，呈现百货宣传片。</p>
+  <p>从行人肩后略向前移动，橱窗门自动打开，构图上沿保留大丸标识。</p>
+  <p class="industry-result"><strong>结果</strong> 入口、陈列和店名同框，识别为百货门店宣传。</p>
 </li>
 <li class="industry">
   <span class="time">00:47–00:48 · 03</span>
   <h3>餐饮：牛角烧肉</h3>
   <p class="industry-ja" lang="ja">飲食</p>
-  <p>以牛角烧肉为具体店铺，展示带有店铺辨识信息的烤肉近景，突出肉片翻面、油脂与热气。</p>
+  <p>烧网近景。夹子翻转一片肉，热气升起，背景桌牌保留可用的店铺标识。</p>
+  <p class="industry-result"><strong>结果</strong> 看到翻面后的烤纹和热气，读出烧肉餐饮场景。</p>
 </li>
 <li class="industry">
   <span class="time">00:48–00:49 · 04</span>
   <h3>汽车：丰田</h3>
   <p class="industry-ja" lang="ja">自動車</p>
-  <p>以丰田为具体品牌，展示可辨识车标的车身光影或行驶镜头，呈现汽车广告。</p>
+  <p>车头三分之四近景。车辆低速驶出阴影，光线掠过车头并照亮车标。</p>
+  <p class="industry-result"><strong>结果</strong> 车头造型和行驶方向清楚，识别为汽车广告。</p>
 </li>
 <li class="industry">
   <span class="time">00:49–00:50 · 05</span>
   <h3>房地产</h3>
   <p class="industry-ja" lang="ja">不動産</p>
-  <p>日本住宅的室内空间或窗景镜头，呈现房源介绍视频。</p>
+  <p>从住宅门框向室内微推一步，露出起居区和整扇采光窗。</p>
+  <p class="industry-result"><strong>结果</strong> 一个动作交代房源的空间纵深和采光。</p>
 </li>
 <li class="industry">
   <span class="time">00:50–00:51 · 06</span>
   <h3>制造业</h3>
   <p class="industry-ja" lang="ja">製造業</p>
-  <p>设备运转或工业产品细节，呈现制造企业的产品说明视频。</p>
+  <p>工业设备近景。机械夹具把一个部件精准放进定位槽。</p>
+  <p class="industry-result"><strong>结果</strong> 看见部件完成落位，读出设备或工艺说明。</p>
 </li>
 <li class="industry">
   <span class="time">00:51–00:52 · 07</span>
   <h3>旅游／住宿</h3>
   <p class="industry-ja" lang="ja">旅行・宿泊</p>
-  <p>温泉旅馆客房或露天风吕镜头，呈现住宿宣传视频。</p>
+  <p>温泉旅馆露天风吕的低机位中景。水面涟漪向外展开，蒸汽后露出庭院。</p>
+  <p class="industry-result"><strong>结果</strong> 同框看到风吕和庭院，识别为住宿体验。</p>
 </li>
 <li class="industry">
   <span class="time">00:52–00:53 · 08</span>
   <h3>服装</h3>
   <p class="industry-ja" lang="ja">アパレル</p>
-  <p>人物穿着服装行走或转身，突出布料质感与上身效果，呈现服装广告。</p>
+  <p>全身中景。模特从侧身转向正面，外套下摆随转身展开。</p>
+  <p class="industry-result"><strong>结果</strong> 在一次转身中看到服装廓形、垂坠和上身效果。</p>
 </li>
 <li class="industry">
   <span class="time">00:53–00:54 · 09</span>
   <h3>制药／医疗</h3>
   <p class="industry-ja" lang="ja">製薬・医療</p>
-  <p>医药产品包装或科普图解，呈现信息说明类视频。</p>
+  <p>俯拍中性包装。手翻开说明书到「使用上の注意」页，页面标题在翻页后定住。</p>
+  <p class="industry-result"><strong>结果</strong> 从包装与说明书读出用药信息说明的用途，画面只突出阅读说明。</p>
 </li>
 <li class="industry">
   <span class="time">00:54–00:55 · 10</span>
   <h3>金融／保险</h3>
   <p class="industry-ja" lang="ja">金融・保険</p>
-  <p>服务介绍图表或流程解释画面，呈现金融信息视频。</p>
+  <p>保险流程说明图中，节点从「入力」移动到「内容確認」。</p>
+  <p class="industry-result"><strong>结果</strong> 一个状态变化说明服务流程，无收益数字。</p>
 </li>
 <li class="industry">
   <span class="time">00:55–00:56 · 11</span>
   <h3>教育／培训</h3>
   <p class="industry-ja" lang="ja">教育・研修</p>
-  <p>清楚的操作步骤或培训图解，呈现知识与流程讲解视频。</p>
+  <p>俯拍培训桌面。手将一个部件对准定位线插入，日文短标签指向正确位置。</p>
+  <p class="industry-result"><strong>结果</strong> 动作和结果同框，观众看懂一个可照做的步骤。</p>
 </li>
 <li class="industry">
   <span class="time">00:56–00:57 · 12</span>
   <h3>招聘／人事</h3>
   <p class="industry-ja" lang="ja">採用・人事</p>
-  <p>企业环境、岗位或团队介绍成片，接入品牌收尾。</p>
+  <p>办公区中景。前辈拉开椅子示意新人坐下，右侧预留浅色背景。</p>
+  <p class="industry-result"><strong>结果</strong> 一眼看懂新人融入团队，浅色留白接 KAIROS 品牌标版。</p>
 </li>
   </ol>
   <p>镜头之间保持整体视觉质量和字幕位置一致，内容本身要有差异，避免十二个行业只是同一种画面换文字。行业样片按实际产品能力准备，品牌镜头作为示例制作内容呈现。前四个行业优先按指定品牌和店铺准备，其余八个可依素材质量替换，不以重复镜头凑数。每镜只展示一个清晰结果，不增加人物痛点或操作过程。</p>
@@ -227,6 +391,10 @@
 </section>
 <section id="notes" class="notes" aria-labelledby="notes-heading">
   <h2 id="notes-heading">制作备注</h2>
+  <p><strong>优先补录</strong> 同一洗衣机案例的日语输入、任务完成后预览、模板字段和不同版式实际输出，分别保留完整原录屏，再从中裁主片镜头。模板示例片与自己生成的成片分开标记。</p>
+  <p><strong>产品界面依据</strong> 11 月 5 日实机记录能确认对话工作台、助手输入、中央预览、模板字段、制作入口和普通导出入口。v11 的日文 UI 是对照实机结构做的重建。新录屏以现场实际语言和控件为准。</p>
+  <p><strong>待产品确认</strong> 食品广告项目已有检查开启记录。仍需补录如何开启、检查触发点、实际提示、建议和人工修改结果。多尺寸交付用实际成片和文件规格核验。确认前用流程图示和独立制作的样片准备剪辑。</p>
+  <p><strong>待回收样片</strong> 连续人像、日系玄关、横版 CM 和 12 个行业，每条记录来源、项目或文件及可用区间。前四个品牌是画面参考，按确认的可用素材落地。</p>
   <p>「日本初」的首创范围和客观依据待核实，片头、片尾、旁白与字幕的最终表述统一以确认口径为准。</p>
   <p>界面与功能演示应对应实际产品或已确认的设计，不为配合文案增加不存在的能力。合规检查的支持范围，需在素材定稿时落实到对应镜头。</p>
   <details class="script-details"><summary>视觉与声音</summary>

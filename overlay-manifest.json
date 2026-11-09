@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "update": "KAIROS 2026-11-06 narrative script and prior v11 preview",
+  "update": "KAIROS November 6 shot and product UI breakdown",
   "assets": [
     {
       "path": "index.html",
@@ -60,32 +60,32 @@
     },
     {
       "path": "materials/Claude交接-2026-11-04/视觉提案-v2/KAIROS-当前脚本.html",
-      "size": 54294,
-      "sha256": "30431dbf2603eb619225bb1d592244ec4109e2409731feaab9a5bdf7148d9ad3",
+      "size": 69870,
+      "sha256": "f33188707b1e503989d82ff6225b20f3edf31f73bb04dce384e7008e15101267",
       "mime": "text/html",
       "type": "html",
       "storage": "file"
     },
     {
       "path": "materials/Claude交接-2026-11-04/视觉提案-v2/KAIROS-当前脚本.json",
-      "size": 20953,
-      "sha256": "edffd9a347155664813f68aa98d30e068d4709b800dc9aa51bac83ef1c68616c",
+      "size": 39822,
+      "sha256": "0a29295d40ddbc9c6bd619f4d95702d85dd3daf5af28f5108e21f116d25214b5",
       "mime": "application/json",
       "type": "document",
       "storage": "file"
     },
     {
       "path": "materials/Claude交接-2026-11-04/视觉提案-v2/KAIROS-当前脚本.md",
-      "size": 16296,
-      "sha256": "6f349627cd426f4db4c9bd0ed1873e77501723ae4a9db3dd39124e0f5042c365",
+      "size": 26247,
+      "sha256": "d3b50bd86b45f3f3730488adbfed71ed56bb2793575c8af179025f0384da438f",
       "mime": "text/markdown",
       "type": "document",
       "storage": "file"
     },
     {
       "path": "materials/Claude交接-2026-11-04/视觉提案-v2/KAIROS-当前脚本.txt",
-      "size": 16287,
-      "sha256": "a72741842a45a14f84428572db562ae135df7fa571a31119c48fe77119dacf23",
+      "size": 26367,
+      "sha256": "c47b4b90eeb3f5bd82aabca39a070c73312646de51f095666456e784ad1efeb6",
       "mime": "text/plain",
       "type": "document",
       "storage": "file"
