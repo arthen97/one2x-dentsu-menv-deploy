@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "update": "KAIROS: specify the Shiseido vertical-to-CM cut",
+  "update": "Iris: publish the 60-second storyboard animatic",
   "assets": [
     {
       "path": "index.html",
@@ -12,8 +12,8 @@
     },
     {
       "path": "materials/Claude交接-2026-11-04/视觉提案-v2/Iris-60s-群像叙事-大图更新版.html",
-      "size": 40569,
-      "sha256": "0a9e97443aa5ebd134d72e6b2ba63409f76d8f65e020ee1bac98ec2ef3a8d93e",
+      "size": 40657,
+      "sha256": "11f845c6b8e0e9016f6261bcdf180e07dddbdc5cbdf20e4812bdaabe7096c0ca",
       "mime": "text/html",
       "type": "html",
       "storage": "file"
@@ -244,10 +244,26 @@
     },
     {
       "path": "iris-shotbook.html",
-      "size": 1662527,
-      "sha256": "77ba143507e73610a15d96b62d0137db429a68f19e216bea074c4c9c9254e14b",
+      "size": 1663841,
+      "sha256": "db15ea9a841c120aae8a89cf4534ab2c55a7a4eacaf178e94b9f391f9729c2a7",
       "mime": "text/html",
       "type": "html",
+      "storage": "file"
+    },
+    {
+      "path": "assets/iris-preview/iris-preview-v1.mp4",
+      "size": 15249848,
+      "sha256": "590c59f9e752f2a5938a5fd6b160c4554bd80c05203b1ce1846bdb886c5d12e2",
+      "mime": "video/mp4",
+      "type": "video",
+      "storage": "file"
+    },
+    {
+      "path": "assets/iris-preview/iris-preview-v1.jpg",
+      "size": 174078,
+      "sha256": "d8282f32c1d790cecd5770d14e6a7027937ebf439d70446883a0be19e4c52997",
+      "mime": "image/jpeg",
+      "type": "image",
       "storage": "file"
     }
   ]
