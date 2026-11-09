@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "update": "KAIROS November 6 shot and product UI breakdown",
+  "update": "KAIROS beauty case: skincare serum and lip makeup",
   "assets": [
     {
       "path": "index.html",
@@ -60,32 +60,32 @@
     },
     {
       "path": "materials/Claude交接-2026-11-04/视觉提案-v2/KAIROS-当前脚本.html",
-      "size": 69870,
-      "sha256": "f33188707b1e503989d82ff6225b20f3edf31f73bb04dce384e7008e15101267",
+      "size": 70095,
+      "sha256": "5019cba26b14fe7be224ba31dfc1d2e1b1bc1c449522e75f4cb876799a7af8d6",
       "mime": "text/html",
       "type": "html",
       "storage": "file"
     },
     {
       "path": "materials/Claude交接-2026-11-04/视觉提案-v2/KAIROS-当前脚本.json",
-      "size": 39822,
-      "sha256": "0a29295d40ddbc9c6bd619f4d95702d85dd3daf5af28f5108e21f116d25214b5",
+      "size": 39911,
+      "sha256": "c2b138c6e2a629a98047efe2e91f5f77ce35ca7a462aeedf595e87f7c4183514",
       "mime": "application/json",
       "type": "document",
       "storage": "file"
     },
     {
       "path": "materials/Claude交接-2026-11-04/视觉提案-v2/KAIROS-当前脚本.md",
-      "size": 26247,
-      "sha256": "d3b50bd86b45f3f3730488adbfed71ed56bb2793575c8af179025f0384da438f",
+      "size": 26336,
+      "sha256": "03897d9f3e89a002026b2a089b30fd7eea1567f32b26a2a79730b1a739946d2a",
       "mime": "text/markdown",
       "type": "document",
       "storage": "file"
     },
     {
       "path": "materials/Claude交接-2026-11-04/视觉提案-v2/KAIROS-当前脚本.txt",
-      "size": 26367,
-      "sha256": "c47b4b90eeb3f5bd82aabca39a070c73312646de51f095666456e784ad1efeb6",
+      "size": 26456,
+      "sha256": "14a1fe844462aa2a37aadd9dc22a3a6cbc216bf14cc7258b69acf1f7d61b9480",
       "mime": "text/plain",
       "type": "document",
       "storage": "file"
