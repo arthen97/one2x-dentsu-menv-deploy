@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "update": "KAIROS lipstick case: KATE Lip Monster 07",
+  "update": "KAIROS case studies: Shiseido Ultimune and KATE Lip Monster 07",
   "assets": [
     {
       "path": "index.html",
@@ -60,32 +60,32 @@
     },
     {
       "path": "materials/Claude交接-2026-11-04/视觉提案-v2/KAIROS-当前脚本.html",
-      "size": 70423,
-      "sha256": "2ad85a79d7cc2eaab619dae70c9c6012d7b5e728adfcca7bc9cce99fb262bfb3",
+      "size": 71237,
+      "sha256": "443010a33692a997ddf1011c2dbda45c5b10047b582c9e7555cc2c9a37e646bd",
       "mime": "text/html",
       "type": "html",
       "storage": "file"
     },
     {
       "path": "materials/Claude交接-2026-11-04/视觉提案-v2/KAIROS-当前脚本.json",
-      "size": 40434,
-      "sha256": "e5c4233ce6b53f79abb3fec05efae6306a8712a809fde8bbba8928c982099f1b",
+      "size": 41417,
+      "sha256": "6fe9f60c912215f7ec9f0ead8db94641e13bf7d1b01a85fb59ca70b48d9e6011",
       "mime": "application/json",
       "type": "document",
       "storage": "file"
     },
     {
       "path": "materials/Claude交接-2026-11-04/视觉提案-v2/KAIROS-当前脚本.md",
-      "size": 26664,
-      "sha256": "ffdc61b4b764f8683c2b303508cb461edcccdb33e6682f2c38749a11777bcee7",
+      "size": 27467,
+      "sha256": "54b6e9111311f77390965d478224126904ac18bb64b5d5b8876e1168d5315c7f",
       "mime": "text/markdown",
       "type": "document",
       "storage": "file"
     },
     {
       "path": "materials/Claude交接-2026-11-04/视觉提案-v2/KAIROS-当前脚本.txt",
-      "size": 26773,
-      "sha256": "542f59fd27f7fad88b5389932962451e536a8b8df443a1b8b5909dd201b34e73",
+      "size": 27570,
+      "sha256": "3fe9e285b7fa84d70f8db907cccb11a9a9bca9c9700e66d8c639c624535d1848",
       "mime": "text/plain",
       "type": "document",
       "storage": "file"
