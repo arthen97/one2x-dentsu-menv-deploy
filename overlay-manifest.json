@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "update": "KAIROS beauty case: skincare serum and lip makeup",
+  "update": "KAIROS lipstick case: KATE Lip Monster 07",
   "assets": [
     {
       "path": "index.html",
@@ -60,32 +60,32 @@
     },
     {
       "path": "materials/Claude交接-2026-11-04/视觉提案-v2/KAIROS-当前脚本.html",
-      "size": 70095,
-      "sha256": "5019cba26b14fe7be224ba31dfc1d2e1b1bc1c449522e75f4cb876799a7af8d6",
+      "size": 70423,
+      "sha256": "2ad85a79d7cc2eaab619dae70c9c6012d7b5e728adfcca7bc9cce99fb262bfb3",
       "mime": "text/html",
       "type": "html",
       "storage": "file"
     },
     {
       "path": "materials/Claude交接-2026-11-04/视觉提案-v2/KAIROS-当前脚本.json",
-      "size": 39911,
-      "sha256": "c2b138c6e2a629a98047efe2e91f5f77ce35ca7a462aeedf595e87f7c4183514",
+      "size": 40434,
+      "sha256": "e5c4233ce6b53f79abb3fec05efae6306a8712a809fde8bbba8928c982099f1b",
       "mime": "application/json",
       "type": "document",
       "storage": "file"
     },
     {
       "path": "materials/Claude交接-2026-11-04/视觉提案-v2/KAIROS-当前脚本.md",
-      "size": 26336,
-      "sha256": "03897d9f3e89a002026b2a089b30fd7eea1567f32b26a2a79730b1a739946d2a",
+      "size": 26664,
+      "sha256": "ffdc61b4b764f8683c2b303508cb461edcccdb33e6682f2c38749a11777bcee7",
       "mime": "text/markdown",
       "type": "document",
       "storage": "file"
     },
     {
       "path": "materials/Claude交接-2026-11-04/视觉提案-v2/KAIROS-当前脚本.txt",
-      "size": 26456,
-      "sha256": "14a1fe844462aa2a37aadd9dc22a3a6cbc216bf14cc7258b69acf1f7d61b9480",
+      "size": 26773,
+      "sha256": "542f59fd27f7fad88b5389932962451e536a8b8df443a1b8b5909dd201b34e73",
       "mime": "text/plain",
       "type": "document",
       "storage": "file"
