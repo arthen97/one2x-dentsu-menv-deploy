@@ -12,16 +12,16 @@
     },
     {
       "path": "materials/Claude交接-2026-11-04/视觉提案-v2/Iris-60s-群像叙事-大图更新版.html",
-      "size": 40560,
-      "sha256": "e2b1f997c7d873a8543c3317b2151d50b4fb66b226ee615d4f202b5891d0d786",
+      "size": 40569,
+      "sha256": "0a9e97443aa5ebd134d72e6b2ba63409f76d8f65e020ee1bac98ec2ef3a8d93e",
       "mime": "text/html",
       "type": "html",
       "storage": "file"
     },
     {
       "path": "materials/Claude交接-2026-11-04/视觉提案-v2/Iris-60s-群像叙事-文字稿.txt",
-      "size": 12287,
-      "sha256": "7348e53d5bfc385f5f3b2ddb851b24e9e3561e1d9a6b8dc9b88d91cf0213b9af",
+      "size": 12296,
+      "sha256": "8e0ba401819052f9b2c3c13f8ec2b5d4437b02c46eafca3cf69018d1ec39c4c2",
       "mime": "text/plain",
       "type": "document",
       "storage": "file"
