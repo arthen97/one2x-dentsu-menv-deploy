@@ -1,11 +1,11 @@
 {
   "schemaVersion": 1,
-  "update": "IRIS family day nine-scene storyboard and script",
+  "update": "KAIROS 2026-11-06 narrative script and prior v11 preview",
   "assets": [
     {
       "path": "index.html",
-      "size": 38700,
-      "sha256": "498e4188e202b956ec39fcadd9db6d55479bd651c183fd495db1b9f2413ff559",
+      "size": 38892,
+      "sha256": "c25fec8250242a6bdef1c379ad4a564d7e505b3e07d1d23c10cbb193e6720808",
       "mime": "text/html",
       "type": "html",
       "storage": "file"
@@ -44,8 +44,8 @@
     },
     {
       "path": "materials/Claude交接-2026-11-04/视觉提案-v2/KAIROS-Claude完善版.html",
-      "size": 50281,
-      "sha256": "afcda44258afbb7c15a673c9c2ec79f39ada5e75617af6556df97db4ac01d914",
+      "size": 50354,
+      "sha256": "7b408dc867a52ab5885962bfb1d482cb597df6a101520abf6074cbedbf9cdb79",
       "mime": "text/html",
       "type": "html",
       "storage": "file"
@@ -60,32 +60,32 @@
     },
     {
       "path": "materials/Claude交接-2026-11-04/视觉提案-v2/KAIROS-当前脚本.html",
-      "size": 29169,
-      "sha256": "db4f18c785516a1e59d436107f45a661d54a0f862c4b7b0705009caa0c5759db",
+      "size": 54294,
+      "sha256": "30431dbf2603eb619225bb1d592244ec4109e2409731feaab9a5bdf7148d9ad3",
       "mime": "text/html",
       "type": "html",
       "storage": "file"
     },
     {
       "path": "materials/Claude交接-2026-11-04/视觉提案-v2/KAIROS-当前脚本.json",
-      "size": 32969,
-      "sha256": "b9fe7a428c14a13b5c3dfabeb3468915a76048b8e66aee93f9e4117b74e8bec9",
+      "size": 20953,
+      "sha256": "edffd9a347155664813f68aa98d30e068d4709b800dc9aa51bac83ef1c68616c",
       "mime": "application/json",
       "type": "document",
       "storage": "file"
     },
     {
       "path": "materials/Claude交接-2026-11-04/视觉提案-v2/KAIROS-当前脚本.md",
-      "size": 6417,
-      "sha256": "c82661496b7d1872c2ee4bee1fccc6475e7c2d86c7a005c1689b228d7576a13c",
+      "size": 16296,
+      "sha256": "6f349627cd426f4db4c9bd0ed1873e77501723ae4a9db3dd39124e0f5042c365",
       "mime": "text/markdown",
       "type": "document",
       "storage": "file"
     },
     {
       "path": "materials/Claude交接-2026-11-04/视觉提案-v2/KAIROS-当前脚本.txt",
-      "size": 6156,
-      "sha256": "227a9403aacb1902202f502ca2af3f3d2b8077270424151632bd71e648261d07",
+      "size": 16287,
+      "sha256": "a72741842a45a14f84428572db562ae135df7fa571a31119c48fe77119dacf23",
       "mime": "text/plain",
       "type": "document",
       "storage": "file"
@@ -236,8 +236,8 @@
     },
     {
       "path": "materials/Claude交接-2026-11-04/视觉提案-v2/references-28.html",
-      "size": 49743,
-      "sha256": "16260a2934e96f8e0f5803530e73afb91429196e0cd7cc59cf5a81ff2ab31f38",
+      "size": 49816,
+      "sha256": "4245ae78462e6ec1f6b18f3abc001ddf92aca73a1415e70b447e6d061212c087",
       "mime": "text/html",
       "type": "html",
       "storage": "file"
