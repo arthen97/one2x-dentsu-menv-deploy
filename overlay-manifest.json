@@ -1,13 +1,37 @@
 {
   "schemaVersion": 1,
-  "update": "KAIROS current v11 preview and 18-shot script",
+  "update": "IRIS family day nine-scene storyboard and script",
   "assets": [
     {
       "path": "index.html",
-      "size": 37845,
-      "sha256": "3b476939ceb3be8225f39cd799addcaf9ac411cc956bc4b2a5c57afbf4196712",
+      "size": 38700,
+      "sha256": "498e4188e202b956ec39fcadd9db6d55479bd651c183fd495db1b9f2413ff559",
       "mime": "text/html",
       "type": "html",
+      "storage": "file"
+    },
+    {
+      "path": "materials/Claude交接-2026-11-04/视觉提案-v2/Iris-60s-群像叙事-大图更新版.html",
+      "size": 40560,
+      "sha256": "e2b1f997c7d873a8543c3317b2151d50b4fb66b226ee615d4f202b5891d0d786",
+      "mime": "text/html",
+      "type": "html",
+      "storage": "file"
+    },
+    {
+      "path": "materials/Claude交接-2026-11-04/视觉提案-v2/Iris-60s-群像叙事-文字稿.txt",
+      "size": 12287,
+      "sha256": "7348e53d5bfc385f5f3b2ddb851b24e9e3561e1d9a6b8dc9b88d91cf0213b9af",
+      "mime": "text/plain",
+      "type": "document",
+      "storage": "file"
+    },
+    {
+      "path": "materials/Claude交接-2026-11-04/视觉提案-v2/Iris-60s-群像叙事-日语录音稿.txt",
+      "size": 1845,
+      "sha256": "11ec8cb0ee9de651cf4607bb6891835d4aea5699a1147e088403deb48a7068ac",
+      "mime": "text/plain",
+      "type": "document",
       "storage": "file"
     },
     {
@@ -67,6 +91,102 @@
       "storage": "file"
     },
     {
+      "path": "materials/Claude交接-2026-11-04/视觉提案-v2/assets/iris-family-day/01.jpg",
+      "size": 84821,
+      "sha256": "5450020a7cb1aba6545bb26190826bca764ff4115a541e29aad3f43ab9720b6b",
+      "mime": "image/jpeg",
+      "type": "image",
+      "storage": "file"
+    },
+    {
+      "path": "materials/Claude交接-2026-11-04/视觉提案-v2/assets/iris-family-day/02.jpg",
+      "size": 74718,
+      "sha256": "aaf9f8c2d63798a615e407396c8881be3fc5878684a797dbb1c446e0555f1114",
+      "mime": "image/jpeg",
+      "type": "image",
+      "storage": "file"
+    },
+    {
+      "path": "materials/Claude交接-2026-11-04/视觉提案-v2/assets/iris-family-day/03.jpg",
+      "size": 66599,
+      "sha256": "661bd8351782228b0a10a41d81ef18a04bc4bf24b2090a0c0a3f98d915af9e5e",
+      "mime": "image/jpeg",
+      "type": "image",
+      "storage": "file"
+    },
+    {
+      "path": "materials/Claude交接-2026-11-04/视觉提案-v2/assets/iris-family-day/04.jpg",
+      "size": 88145,
+      "sha256": "ff186f47f848e0ef619568eac2cdbb52cd492568d7b1be3fc4e8999be863a35a",
+      "mime": "image/jpeg",
+      "type": "image",
+      "storage": "file"
+    },
+    {
+      "path": "materials/Claude交接-2026-11-04/视觉提案-v2/assets/iris-family-day/05.jpg",
+      "size": 95668,
+      "sha256": "def93c71d67558da9bc5ba803ecb34b3d9e798bd14a22d1085956f6b7bb64d1e",
+      "mime": "image/jpeg",
+      "type": "image",
+      "storage": "file"
+    },
+    {
+      "path": "materials/Claude交接-2026-11-04/视觉提案-v2/assets/iris-family-day/06.jpg",
+      "size": 67483,
+      "sha256": "d03179bb1e948bb4e74c9fb3a5ea585b45c038750f3d7d6838d00e6344fa4984",
+      "mime": "image/jpeg",
+      "type": "image",
+      "storage": "file"
+    },
+    {
+      "path": "materials/Claude交接-2026-11-04/视觉提案-v2/assets/iris-family-day/07.jpg",
+      "size": 76055,
+      "sha256": "f600ec245e6ef6437b574600f145a2cd8db567ea47eabf5cbf4792b6d255fb59",
+      "mime": "image/jpeg",
+      "type": "image",
+      "storage": "file"
+    },
+    {
+      "path": "materials/Claude交接-2026-11-04/视觉提案-v2/assets/iris-family-day/08.jpg",
+      "size": 69186,
+      "sha256": "4da533558309ca599dc7d101906af883785243076c86cc22fcd62aad4a3f69f2",
+      "mime": "image/jpeg",
+      "type": "image",
+      "storage": "file"
+    },
+    {
+      "path": "materials/Claude交接-2026-11-04/视觉提案-v2/assets/iris-family-day/09.jpg",
+      "size": 69814,
+      "sha256": "496afb2ddd964eba3a9b3e446e595ef20fbf2f82f114fbd3904b308bc418ac09",
+      "mime": "image/jpeg",
+      "type": "image",
+      "storage": "file"
+    },
+    {
+      "path": "materials/Claude交接-2026-11-04/视觉提案-v2/assets/iris-family-day/closing.jpg",
+      "size": 93274,
+      "sha256": "f2e2938a37fc61846f76ccadc3cd888df00b97cebc848daa810ec9b6745ddada",
+      "mime": "image/jpeg",
+      "type": "image",
+      "storage": "file"
+    },
+    {
+      "path": "materials/Claude交接-2026-11-04/视觉提案-v2/assets/iris-family-day/lumi.jpg",
+      "size": 34189,
+      "sha256": "f48caad43b2ea43edfddae886e8a65cca1b3950edc2b4f54475cfaf9690475a3",
+      "mime": "image/jpeg",
+      "type": "image",
+      "storage": "file"
+    },
+    {
+      "path": "materials/Claude交接-2026-11-04/视觉提案-v2/assets/iris-family-day/okinawa.jpg",
+      "size": 155324,
+      "sha256": "7acbcb2d3f193bcedff90002d169d612273c54bfaf85d24a43046580ac0a3f6e",
+      "mime": "image/jpeg",
+      "type": "image",
+      "storage": "file"
+    },
+    {
       "path": "materials/Claude交接-2026-11-04/视觉提案-v2/current-script/assets/KAIROS-v11-poster.jpg",
       "size": 125676,
       "sha256": "5f65352c0f4c7a615760fe17213f5fc69b0da61fc191f8a16b11af03bb3d327e",
@@ -96,6 +216,22 @@
       "sha256": "fdc2a0b55322101f0c7d8df1e580fae73377e1c2e949b8d2dcdb982b735ec093",
       "mime": "video/mp4",
       "type": "video",
+      "storage": "file"
+    },
+    {
+      "path": "materials/Claude交接-2026-11-04/视觉提案-v2/index.html",
+      "size": 3159,
+      "sha256": "e1c3051f7a4369145818b05294613200c611dd237d37839f9945d56e3f9033ac",
+      "mime": "text/html",
+      "type": "html",
+      "storage": "file"
+    },
+    {
+      "path": "materials/Claude交接-2026-11-04/视觉提案-v2/iris_family_day_9scenes.md",
+      "size": 4586,
+      "sha256": "555fb766569c5933dd5fac3aecd730ec35d2a7d901b74016de771c74f0e30f48",
+      "mime": "application/octet-stream",
+      "type": "document",
       "storage": "file"
     },
     {
